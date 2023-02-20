@@ -10,6 +10,9 @@ out/
 .project
 .settings/
 
+# Wiki
+wiki/
+
 # maven build target
 target/
 
