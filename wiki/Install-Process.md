@@ -29,15 +29,16 @@ Refactor:
   - Rename Directory: <i>stsMod</i> (can stay same for all mods)
   - Rename Module: <i>theCoderMod</i>
 - Package (<i>theDefault</i>) -> <i>theCoder</i>
-- Main Class File (<i>DefaultMod</i>) -> <i>TheCoderMod</i>
+- Main Class File (<i>DefaultMod.java</i>) -> <i>TheCoderMod.java</i>
   - (Manually) replace <i>theDefault</i> with <i>theCoder</i>
   - Search for <i>ModID</i> and change reference to <i>TheCoder</i> (or whatever you put in the <i>pom.xml</i> file)
+- Character File (<i>TheDefault.java</i>) -> <i>TheCoder.java</i>
 - Resources (<i>theDefaultResources</i>) -> <i>theCoderResources</i>
-  - Change name of each file under <i>localization.eng</i> to start with <i>TheCoder</i>
-  - Shift-Ctrl-r to replace in all files (and make sure <i>Match Case</i> is <b>on</b>)
+  - Change name of each file under <i>resources -> theCoderResources -> localization.eng</i> to start with <i>TheCoder</i>
+  - Shift-Ctrl-r to replace in all files in <i>theCoderResources</i> (and make sure <i>Match Case</i> is <b>on</b>)
   - Replace <i>theDefault</i> with <i>theCoder</i>
   - Replace <i>thedefault</i> with <i>thecoder</i>
-- Character file <i>TheDefault.java</i> to <i>TheCoder.java</i>
+  - Character animation file <i>resources -> theCoderResources -> images -> char.defaultCharacter -> Spriter -> theDefaultAnimation.scml</i> to <i>theCoderAnimation.scml</i>
 - Do a final check within all <i>.java</i> files to make sure instances of <i>theDefault</i> and <i>thedefault</i> have been updated
 
 # Step 3
