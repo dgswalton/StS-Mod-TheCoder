@@ -16,7 +16,8 @@
         <ModTheSpire.version>3.8.0</ModTheSpire.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->
-        <Steam.path>C:\Program Files (x86)\Steam\steamapps</Steam.path>
+        <!--<Steam.path>C:\Program Files (x86)\Steam\steamapps</Steam.path>--> <!-- Dad's Compupter -->
+        <Steam.path>D:\SteamLibrary\steamapps</Steam.path> <!-- Tenshi's Computer -->
     </properties>
 
     <dependencies>
