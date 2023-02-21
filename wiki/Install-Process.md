@@ -27,7 +27,7 @@ However, some of those directions are a little stale.  Below are some updated no
 Refactor:
 - Project Folder (<i>theDefault</i>)
   - Rename Directory: <i>stsMod</i> (can stay same for all mods)
-  - Rename Module: <i>theCoder</i>
+  - Rename Module: <i>theCoderMod</i>
 - Package (<i>theDefault</i>) -> <i>theCoder</i>
 - Main Class File (<i>DefaultMod</i>) -> <i>TheCoderMod</i>
   - (Manually) replace <i>theDefault</i> with <i>theCoder</i>
