@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theCoder.cards.*;
-import theCoder.characters.TheDefault;
+import theCoder.characters.TheCoder;
 import theCoder.events.IdentityCrisisEvent;
 import theCoder.potions.PlaceholderPotion;
 import theCoder.relics.BottledPlaceholderRelic;
@@ -205,9 +205,9 @@ public class TheCoderMod implements
         
         logger.info("Done subscribing");
         
-        logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
+        logger.info("Creating the color " + TheCoder.Enums.COLOR_GRAY.toString());
         
-        BaseMod.addColor(TheDefault.Enums.COLOR_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
+        BaseMod.addColor(TheCoder.Enums.COLOR_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
                 DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
@@ -289,13 +289,13 @@ public class TheCoderMod implements
     
     @Override
     public void receiveEditCharacters() {
-        logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Beginning to edit characters. " + "Add " + TheCoder.Enums.THE_DEFAULT.toString());
         
-        BaseMod.addCharacter(new TheDefault("the Default", TheDefault.Enums.THE_DEFAULT),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addCharacter(new TheCoder("the Default", TheCoder.Enums.THE_DEFAULT),
+                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheCoder.Enums.THE_DEFAULT);
         
         receiveEditPotions();
-        logger.info("Added " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Added " + TheCoder.Enums.THE_DEFAULT.toString());
     }
     
     // =============== /LOAD THE CHARACTER/ =================
@@ -353,7 +353,7 @@ public class TheCoderMod implements
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
         AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
             .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
-            .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
+            .playerClass(TheCoder.Enums.THE_DEFAULT) // Character specific event
             .create();
 
         // Add the event
@@ -373,7 +373,7 @@ public class TheCoderMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheCoder.Enums.THE_DEFAULT);
         
         logger.info("Done editing potions");
     }
@@ -395,9 +395,9 @@ public class TheCoderMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheCoder.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheCoder.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheCoder.Enums.COLOR_GRAY);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -439,7 +439,7 @@ public class TheCoderMod implements
 
         //TODO: Rename the "DefaultMod" with the modid in your ModTheSpire.json file
         //TODO: The artifact mentioned in ModTheSpire.json is the artifactId in pom.xml you should've edited earlier
-        new AutoAdd("TheCoderMod") // ${project.artifactId}
+        new AutoAdd("TheCoder") // ${project.artifactId}
             .packageFilter(AbstractDefaultCard.class) // filters to any class in the same package as AbstractDefaultCard, nested packages included
             .setDefaultSeen(true)
             .cards();
@@ -463,31 +463,31 @@ public class TheCoderMod implements
         
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
-                getModID() + "Resources/localization/eng/TheCoderMod-Card-Strings.json");
+                getModID() + "Resources/localization/eng/TheCoder-Card-Strings.json");
         
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
-                getModID() + "Resources/localization/eng/TheCoderMod-Power-Strings.json");
+                getModID() + "Resources/localization/eng/TheCoder-Power-Strings.json");
         
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
-                getModID() + "Resources/localization/eng/TheCoderMod-Relic-Strings.json");
+                getModID() + "Resources/localization/eng/TheCoder-Relic-Strings.json");
         
         // Event Strings
         BaseMod.loadCustomStringsFile(EventStrings.class,
-                getModID() + "Resources/localization/eng/TheCoderMod-Event-Strings.json");
+                getModID() + "Resources/localization/eng/TheCoder-Event-Strings.json");
         
         // PotionStrings
         BaseMod.loadCustomStringsFile(PotionStrings.class,
-                getModID() + "Resources/localization/eng/TheCoderMod-Potion-Strings.json");
+                getModID() + "Resources/localization/eng/TheCoder-Potion-Strings.json");
         
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
-                getModID() + "Resources/localization/eng/TheCoderMod-Character-Strings.json");
+                getModID() + "Resources/localization/eng/TheCoder-Character-Strings.json");
         
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
-                getModID() + "Resources/localization/eng/TheCoderMod-Orb-Strings.json");
+                getModID() + "Resources/localization/eng/TheCoder-Orb-Strings.json");
         
         logger.info("Done edittting strings");
     }
@@ -507,7 +507,7 @@ public class TheCoderMod implements
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
         
         Gson gson = new Gson();
-        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/TheCoderMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/TheCoder-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
         
         if (keywords != null) {

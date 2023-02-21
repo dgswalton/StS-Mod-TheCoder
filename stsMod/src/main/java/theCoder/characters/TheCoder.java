@@ -30,13 +30,13 @@ import theCoder.relics.PlaceholderRelic2;
 import java.util.ArrayList;
 
 import static theCoder.TheCoderMod.*;
-import static theCoder.characters.TheDefault.Enums.COLOR_GRAY;
+import static theCoder.characters.TheCoder.Enums.COLOR_GRAY;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
 //and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
 //All text (starting description and loadout, anything labeled TEXT[]) can be found in DefaultMod-character-Strings.json in the resources
 
-public class TheDefault extends CustomPlayer {
+public class TheCoder extends CustomPlayer {
     public static final Logger logger = LogManager.getLogger(TheCoderMod.class.getName());
 
     // =============== CHARACTER ENUMERATORS =================
@@ -83,27 +83,27 @@ public class TheDefault extends CustomPlayer {
     // =============== TEXTURES OF BIG ENERGY ORB ===============
 
     public static final String[] orbTextures = {
-            "theDefaultResources/images/char/defaultCharacter/orb/layer1.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer2.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer3.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer4.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer5.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer6.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer1d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer2d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer3d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer4d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer5d.png",};
+            "theCoderResources/images/char/defaultCharacter/orb/layer1.png",
+            "theCoderResources/images/char/defaultCharacter/orb/layer2.png",
+            "theCoderResources/images/char/defaultCharacter/orb/layer3.png",
+            "theCoderResources/images/char/defaultCharacter/orb/layer4.png",
+            "theCoderResources/images/char/defaultCharacter/orb/layer5.png",
+            "theCoderResources/images/char/defaultCharacter/orb/layer6.png",
+            "theCoderResources/images/char/defaultCharacter/orb/layer1d.png",
+            "theCoderResources/images/char/defaultCharacter/orb/layer2d.png",
+            "theCoderResources/images/char/defaultCharacter/orb/layer3d.png",
+            "theCoderResources/images/char/defaultCharacter/orb/layer4d.png",
+            "theCoderResources/images/char/defaultCharacter/orb/layer5d.png",};
 
     // =============== /TEXTURES OF BIG ENERGY ORB/ ===============
 
     // =============== CHARACTER CLASS START =================
 
-    public TheDefault(String name, PlayerClass setClass) {
+    public TheCoder(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "theDefaultResources/images/char/defaultCharacter/orb/vfx.png", null,
+                "theCoderResources/images/char/defaultCharacter/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "theDefaultResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+                        "theCoderResources/images/char/defaultCharacter/Spriter/theCoderAnimation.scml"));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
@@ -252,7 +252,7 @@ public class TheDefault extends CustomPlayer {
     // Should return a new instance of your character, sending name as its name parameter.
     @Override
     public AbstractPlayer newInstance() {
-        return new TheDefault(name, chosenClass);
+        return new TheCoder(name, chosenClass);
     }
 
     // Should return a Color object to be used to color the miniature card images in run history.

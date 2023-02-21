@@ -3,9 +3,9 @@
 
     <!--Hello! You'll basically should only need to change these names and the steam path (just below)-->
     <!--The author name(s) as they appear in MTS and any other comments are in your ModTheSpire.json-->
-    <groupId>thecodermod</groupId>
-    <artifactId>TheCoderMod</artifactId> <!--Keep a note of this one: this is the ID used in the "auto add cards" method-->
-    <name>The Coder Mod</name>
+    <groupId>thecoder</groupId>
+    <artifactId>TheCoder</artifactId> <!--Keep a note of this one: this is the ID used in the "auto add cards" method-->
+    <name>The Coder</name>
     <version>0.0.1</version>
     <description>The Coder mod by Jayce Walton.</description>
 
