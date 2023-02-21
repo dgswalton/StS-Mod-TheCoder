@@ -36,6 +36,8 @@ Refactor:
   - Shift-Ctrl-r to replace in all files (and make sure <i>Match Case</i> is <b>on</b>)
   - Replace <i>theDefault</i> with <i>theCoder</i>
   - Replace <i>thedefault</i> with <i>thecoder</i>
+- Character file <i>TheDefault.java</i> to <i>TheCoder.java</i>
+- Do a final check within all <i>.java</i> files to make sure instances of <i>theDefault</i> and <i>thedefault</i> have been updated
 
 # Step 3
 
