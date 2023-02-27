@@ -49,5 +49,9 @@
   "theCoder:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "theCoder:CardByte": {
+    "NAME": "Byte",
+    "DESCRIPTION": "Deal 8 damage; Gain 8 block;"
   }
 }

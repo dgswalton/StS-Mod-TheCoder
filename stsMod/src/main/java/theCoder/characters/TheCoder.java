@@ -171,6 +171,8 @@ public class TheCoder extends CustomPlayer {
         retVal.add(DefaultAttackWithVariable.ID);
         retVal.add(DefaultSecondMagicNumberSkill.ID);
         retVal.add(OrbSkill.ID);
+
+        retVal.add(CardByte.ID);
         return retVal;
     }
 
