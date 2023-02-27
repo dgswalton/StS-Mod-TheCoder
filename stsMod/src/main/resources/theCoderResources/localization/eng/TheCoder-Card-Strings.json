@@ -52,6 +52,14 @@
   },
   "theCoder:CardByte": {
     "NAME": "Byte",
-    "DESCRIPTION": "Deal 8 damage; Gain 8 block;"
+    "DESCRIPTION": "Deal !D! damage; Gain !B! block;"
+  },
+  "theCoder:CardSyntaxError": {
+    "NAME": "Syntax Error",
+    "DESCRIPTION": "Gain !B! block;"
+  },
+  "theCoder:CardRunTimeError": {
+    "NAME": "RunTimeError",
+    "DESCRIPTION": "Deal !D! damage !M! times; Exhaust;"
   }
 }

@@ -19,7 +19,7 @@ import theCoder.TheCoderMod;
 import theCoder.characters.TheCoder;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardByte extends CustomCard {
+public class CardRunTimeError extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -27,11 +27,11 @@ public class CardByte extends CustomCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = TheCoderMod.makeID(CardByte.class.getSimpleName());
+    public static final String ID = TheCoderMod.makeID(CardRunTimeError.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    // path to picture
+    // create image path
     public static final String IMG = makeCardPath("Attack.png");
-    // use JSON to get the name and description of card
+    // get name and description from JSON
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -40,44 +40,46 @@ public class CardByte extends CustomCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheCoder.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 8;
-    private static final int BLOCK = 8;
-    private static final int UPGRADED_COST = 1;
+    private static final int DAMAGE = 0;
+    private static final int ATTACK_TIMES = 10;
+    // number of times this attack hits for
+    private static final int UPGRADE_PLUS_TIMES = 5;
 
     // /STAT DECLARATION/
 
-    public CardByte() {
+    public CardRunTimeError() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         // making card do damage and gain block
         baseDamage = DAMAGE;
-        baseBlock = BLOCK;
+        // making "magic number" which just changes the in game string seen on card
+        magicNumber = baseMagicNumber = ATTACK_TIMES;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // the for loop is to repeat the attack animation and damage as many times as I need
         // This card will deal damage and have an animation
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        // This card will gain block
-        AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, baseBlock));
+        for(int i=0; i<ATTACK_TIMES; i++) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                            AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        }
     }
 
     // Upgraded stats.
     @Override
-    // Upgrades cost to 1
+    // Upgrades block +4
     public void upgrade() {
         if (!upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(UPGRADED_COST);
+            this.upgradeMagicNumber(UPGRADE_PLUS_TIMES);
             this.initializeDescription();
         }
     }
