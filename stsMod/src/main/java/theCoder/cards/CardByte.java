@@ -55,8 +55,8 @@ public class CardByte extends CustomCard {
     public CardByte() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         // making card do damage and gain block
-        baseDamage = DAMAGE;
-        baseBlock = BLOCK;
+        this.baseDamage = DAMAGE;
+        this.baseBlock = BLOCK;
     }
 
     // Actions the card should do.

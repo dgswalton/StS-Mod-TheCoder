@@ -50,16 +50,36 @@
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Default Orb."
   },
+  "This is where my cards start -------------------------------------------------------------": {
+    "NaME": "LOOK BELOW",
+    "DESCRIPTION": "THIS IS JUST A MARKER TO SHOW WHERE MY ACTUAL CARDS START"
+  },
   "theCoder:CardByte": {
     "NAME": "Byte",
     "DESCRIPTION": "Deal !D! damage; Gain !B! block;"
   },
   "theCoder:CardSyntaxError": {
     "NAME": "Syntax Error",
-    "DESCRIPTION": "Gain !B! block;"
+    "DESCRIPTION": "Gain !B! block"
   },
   "theCoder:CardRunTimeError": {
     "NAME": "RunTimeError",
     "DESCRIPTION": "Deal !D! damage !M! times; Exhaust;"
+  },
+  "theCoder:CardStrike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage;"
+  },
+  "theCoder:CardDefend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! block;"
+  },
+  "theCoder:CardBasicBug": {
+    "NAME": "Basic Bug",
+    "DESCRIPTION": "Unplayable; When you draw this play it; Deal !M! damage to self and !D! to random enemy; Exhaust;"
+  },
+  "theCoder:CardIntermittentBug": {
+    "NAME": "Intermittent Bug",
+    "DESCRIPTION": "Does 1 randomly: Kill target non-boss enemy, Deal 20 damage, Give enemy 5 strength, Heal enemy for 20; Exhaust;"
   }
 }

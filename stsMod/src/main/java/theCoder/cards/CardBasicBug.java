@@ -7,8 +7,8 @@ package theCoder.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -21,7 +21,7 @@ import theCoder.TheCoderMod;
 import theCoder.characters.TheCoder;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardRunTimeError extends CustomCard {
+public class CardBasicBug extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -29,11 +29,11 @@ public class CardRunTimeError extends CustomCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = TheCoderMod.makeID(CardRunTimeError.class.getSimpleName());
+    public static final String ID = TheCoderMod.makeID(CardBasicBug.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    // create image path
+    // path to picture
     public static final String IMG = makeCardPath("Attack.png");
-    // get name and description from JSON
+    // use JSON to get the name and description of card
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -42,47 +42,49 @@ public class CardRunTimeError extends CustomCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheCoder.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
-    private static final int DAMAGE = 0;
-    private static final int ATTACK_TIMES = 10;
-    // number of times this attack hits for
-    private static final int UPGRADE_PLUS_TIMES = 5;
+    private static final int COST = -2;
+    private static final int DAMAGE = 15;
+    private static final int DAMAGE_TO_SELF = 5;
+    private static final int UPGRADE_PLUS_DAMAGE = 5;
 
     // /STAT DECLARATION/
 
-    public CardRunTimeError() {
+    public CardBasicBug() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        // making card do damage and gain block
-        this.baseDamage = DAMAGE;
-        // making "magic number" which just changes the in game string seen on card
-        this.magicNumber = this.baseMagicNumber = ATTACK_TIMES;
         this.exhaust = true;
+        this.baseDamage = DAMAGE;
+        this.magicNumber = this.baseMagicNumber = DAMAGE_TO_SELF;
     }
 
     // Actions the card should do.
+
+    // this card will have an action played when drawn
+    public void triggerWhenDrawn() {
+        // This card will deal damage and have an animation
+        this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        // this card will deal damage to self and have an animation
+        this.addToBot(new DamageAction(AbstractDungeon.player,
+                new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS),
+                AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        // this will exhaust
+        this.addToBot(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
+    }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // the for loop is to repeat the attack animation and damage as many times as I need
-        // This card will deal damage and have an animation
-        for(int i=0; i<ATTACK_TIMES; i++) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                            AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        }
     }
 
     // Upgraded stats.
     @Override
-    // Upgrades block +4
+    // Upgrades cost to 1
     public void upgrade() {
         if (!upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADE_PLUS_TIMES);
+            this.upgradeDamage(UPGRADE_PLUS_DAMAGE);
             this.initializeDescription();
         }
     }

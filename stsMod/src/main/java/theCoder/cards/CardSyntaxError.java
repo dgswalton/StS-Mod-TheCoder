@@ -54,7 +54,7 @@ public class CardSyntaxError extends CustomCard {
     public CardSyntaxError() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         // making card gain block
-        baseBlock = BLOCK;
+        this.baseBlock = BLOCK;
     }
 
     // Actions the card should do.

@@ -175,6 +175,10 @@ public class TheCoder extends CustomPlayer {
         retVal.add(CardByte.ID);
         retVal.add(CardSyntaxError.ID);
         retVal.add(CardRunTimeError.ID);
+        retVal.add(CardStrike.ID);
+        retVal.add(CardBasicBug.ID);
+        retVal.add(CardDefend.ID);
+        retVal.add(CardIntermittentBug.ID);
         return retVal;
     }
 
