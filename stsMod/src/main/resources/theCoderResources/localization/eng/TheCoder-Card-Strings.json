@@ -81,5 +81,10 @@
   "theCoder:CardIntermittentBug": {
     "NAME": "Intermittent Bug",
     "DESCRIPTION": "Does 1 randomly: Kill target non-boss enemy, Deal 20 damage, Give enemy 5 strength, Heal enemy for 20; Exhaust;"
+  },
+  "theCoder:CardForLoop": {
+    "NAME": "For Loop",
+    "DESCRIPTION": "The next X cards are played twice; Exhaust;",
+    "UPGRADE_DESCRIPTION": "The next X +1 cards are played twice; Exhaust;"
   }
 }

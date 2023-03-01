@@ -6,5 +6,9 @@
 "theCoder:RarePower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"theCoder:ForLoopPower": {
+        "NAME": "For Loop",
+        "DESCRIPTIONS": ["Next card is played an additional time"]
 }
 }
