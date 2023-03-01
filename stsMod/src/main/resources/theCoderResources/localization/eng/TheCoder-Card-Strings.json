@@ -86,5 +86,9 @@
     "NAME": "For Loop",
     "DESCRIPTION": "The next X cards are played twice; Exhaust;",
     "UPGRADE_DESCRIPTION": "The next X +1 cards are played twice; Exhaust;"
+  },
+  "theCoder:CardUpgradeSystems": {
+    "NAME": "Upgrade Systems",
+    "DESCRIPTION": "Gain !M! strength and dexterity; Insert 4 dazed into your draw pile;"
   }
 }

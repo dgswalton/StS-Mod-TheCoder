@@ -180,6 +180,7 @@ public class TheCoder extends CustomPlayer {
         retVal.add(CardDefend.ID);
         //retVal.add(CardIntermittentBug.ID);
         retVal.add(CardForLoop.ID);
+        retVal.add(CardUpgradeSystems.ID);
         return retVal;
     }
 

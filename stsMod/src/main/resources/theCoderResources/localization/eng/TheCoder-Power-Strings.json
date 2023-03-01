@@ -9,6 +9,7 @@
 },
 "theCoder:ForLoopPower": {
         "NAME": "For Loop",
-        "DESCRIPTIONS": ["Next card is played an additional time"]
+        "DESCRIPTIONS": ["Your next ", " cards is played an additional time",
+                        " card is played an additional time"]
 }
 }

@@ -38,9 +38,13 @@ public class ForLoopPower extends AbstractPower {
         this.updateDescription();
         //this.loadRegion("ForLoopPower");
     }
-
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        if(this.amount>1) {
+            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        }
+        else if (this.amount == 1){
+            this.description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
+        }
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
