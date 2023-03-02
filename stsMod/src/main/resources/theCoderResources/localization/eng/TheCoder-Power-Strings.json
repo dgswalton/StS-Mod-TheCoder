@@ -11,5 +11,17 @@
         "NAME": "For Loop",
         "DESCRIPTIONS": ["Your next ", " cards is played an additional time",
                         " card is played an additional time"]
+},
+"theCoder:VirusPower": {
+        "NAME": "Virus",
+        "DESCRIPTIONS": ["Transfer all debuffs to a random enemy"]
+},
+"theCoder:DarkModePower": {
+        "NAME": "Dark Mode",
+        "DESCRIPTIONS": ["Cannot see enemy intents"]
+},
+"theCoder:BlueScreenPower": {
+        "NAME": "Blue Screen",
+        "DESCRIPTIONS": ["At the end of your turn, deal ", " damage to ALL enemies then insert 1 dazed, burn, and void into your draw pile"]
 }
 }

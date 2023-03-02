@@ -62,7 +62,7 @@ public class CardSyntaxError extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // This card will gain block
         AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, baseBlock));
+                new GainBlockAction(p, p, this.block));
     }
 
     // Upgraded stats.

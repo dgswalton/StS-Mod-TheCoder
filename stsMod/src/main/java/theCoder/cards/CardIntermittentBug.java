@@ -77,7 +77,7 @@ public class CardIntermittentBug extends CustomCard {
         // 25% chance of dealing 10 damage if enemy is not a boss
         else if ((ACTION == 1) || (ACTION == 0)){
             AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                    new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                             AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
         // 25% chance of giving an enemy 2 strength

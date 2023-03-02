@@ -95,5 +95,25 @@
     "NAME": "Sort",
     "DESCRIPTION": "Scry your draw pile;",
     "UPGRADE_DESCRIPTION": "Innate; Scry your draw pile;"
+  },
+  "theCoder:CardVirus": {
+    "NAME": "Virus",
+    "DESCRIPTION": "Apply !M! weak and vulnerable; If the enemy dies, transfer all debuffs to a random enemy;"
+  },
+  "theCoder:CardImport": {
+    "NAME": "Import",
+    "DESCRIPTION": "Choose 1 of !M! random cards to add to your hand; Exhaust;"
+  },
+  "theCoder:CardDarkMode": {
+    "NAME": "Dark Mode",
+    "DESCRIPTION": "Lose ability to see enemy intents; Gain !M! strength and dexterity;"
+  },
+  "theCoder:CardConditional": {
+    "NAME": "Conditional",
+    "DESCRIPTION": "If the enemy intends to attack, gain !B! block; Else, deal !D! damage;"
+  },
+  "theCoder:CardBlueScreen": {
+    "NAME": "Blue Screen",
+    "DESCRIPTION": "At the end of your turn, deal !M! damage to ALL enemies; Insert 1 dazed, burn, and void into your draw pile;"
   }
 }

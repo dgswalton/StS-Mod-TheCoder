@@ -67,7 +67,7 @@ public class CardStrike extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // This card will deal damage and have an animation
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 

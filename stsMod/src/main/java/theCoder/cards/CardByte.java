@@ -64,11 +64,11 @@ public class CardByte extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // This card will deal damage and have an animation
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         // This card will gain block
         AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, baseBlock));
+                new GainBlockAction(p, p, this.block));
     }
 
     // Upgraded stats.

@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.relics.RunicDome;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
@@ -156,32 +157,14 @@ public class TheCoder extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        retVal.add(DefaultCommonAttack.ID);
-        retVal.add(DefaultUncommonAttack.ID);
-        retVal.add(DefaultRareAttack.ID);
-
-        retVal.add(DefaultCommonSkill.ID);
-        retVal.add(DefaultUncommonSkill.ID);
-        retVal.add(DefaultRareSkill.ID);
-
-        retVal.add(DefaultCommonPower.ID);
-        retVal.add(DefaultUncommonPower.ID);
-        retVal.add(DefaultRarePower.ID);
-
-        retVal.add(DefaultAttackWithVariable.ID);
         retVal.add(DefaultSecondMagicNumberSkill.ID);
-        retVal.add(OrbSkill.ID);
-
-        retVal.add(CardByte.ID);
-        retVal.add(CardSyntaxError.ID);
-        retVal.add(CardRunTimeError.ID);
         retVal.add(CardStrike.ID);
-        retVal.add(CardBasicBug.ID);
         retVal.add(CardDefend.ID);
-        retVal.add(CardIntermittentBug.ID);
-        retVal.add(CardForLoop.ID);
-        retVal.add(CardUpgradeSystems.ID);
         retVal.add(CardSort.ID);
+        retVal.add(CardVirus.ID);
+        retVal.add(CardDarkMode.ID);
+        retVal.add(CardConditional.ID);
+        retVal.add(CardBlueScreen.ID);
         return retVal;
     }
 

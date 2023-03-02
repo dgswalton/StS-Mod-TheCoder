@@ -7,6 +7,7 @@ package theCoder.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -15,11 +16,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import theCoder.TheCoderMod;
 import theCoder.characters.TheCoder;
+import theCoder.powers.VirusPower;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardDefend extends CustomCard {
+public class CardVirus extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -27,7 +31,7 @@ public class CardDefend extends CustomCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = TheCoderMod.makeID(CardDefend.class.getSimpleName());
+    public static final String ID = TheCoderMod.makeID(CardVirus.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     // path to picture
     public static final String IMG = makeCardPath("Attack.png");
@@ -40,28 +44,34 @@ public class CardDefend extends CustomCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheCoder.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 1;
+    private static final int DEBUFF = 2;
+    private static final int UPGRADE_PLUS_DEBUFF = 2;
 
     // /STAT DECLARATION/
 
-    public CardDefend() {
+    public CardVirus() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         // making card do damage and gain block
-        this.baseBlock = BLOCK;
+        this.magicNumber = this.baseMagicNumber = DEBUFF;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // This card will gain block
-        this.addToBot(new GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
+                new WeakPower(m, this.magicNumber, false), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
+                new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+        if(!m.hasPower("VirusPower")) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
+                    new VirusPower(m, p)));
+        }
     }
 
     // Upgraded stats.
@@ -70,7 +80,7 @@ public class CardDefend extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             this.upgradeName();
-            this.upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.upgradeMagicNumber(UPGRADE_PLUS_DEBUFF);
             this.initializeDescription();
         }
     }

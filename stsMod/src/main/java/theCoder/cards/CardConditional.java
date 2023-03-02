@@ -19,7 +19,7 @@ import theCoder.TheCoderMod;
 import theCoder.characters.TheCoder;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardDefend extends CustomCard {
+public class CardConditional extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -27,7 +27,7 @@ public class CardDefend extends CustomCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = TheCoderMod.makeID(CardDefend.class.getSimpleName());
+    public static final String ID = TheCoderMod.makeID(CardConditional.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     // path to picture
     public static final String IMG = makeCardPath("Attack.png");
@@ -40,28 +40,39 @@ public class CardDefend extends CustomCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
-    private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheCoder.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 1;
+    private static final int DAMAGE = 8;
+    private static final int BLOCK = 8;
+    private static final int UPGRADE_PLUS_DAMAGE = 4;
+    private static final int UPGRADE_PLUS_BLOCK = 4;
 
     // /STAT DECLARATION/
 
-    public CardDefend() {
+    public CardConditional() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         // making card do damage and gain block
+        this.baseDamage = DAMAGE;
         this.baseBlock = BLOCK;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // This card will gain block
-        this.addToBot(new GainBlockAction(p, p, this.block));
+        if(m.intent == AbstractMonster.Intent.ATTACK){
+            AbstractDungeon.actionManager.addToBottom(
+                    new GainBlockAction(p, p, this.block));
+        }
+        else{
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                            AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        }
+
     }
 
     // Upgraded stats.
@@ -70,6 +81,7 @@ public class CardDefend extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             this.upgradeName();
+            this.upgradeDamage(UPGRADE_PLUS_DAMAGE);
             this.upgradeBlock(UPGRADE_PLUS_BLOCK);
             this.initializeDescription();
         }
