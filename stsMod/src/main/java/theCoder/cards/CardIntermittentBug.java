@@ -50,7 +50,7 @@ public class CardIntermittentBug extends CustomCard {
     private static final int DAMAGE = 20;
     private static final int ENEMY_STR = 5;
     private static final int ENEMY_HEAL = 20;
-    private static final int UPGRADE_PLUS_BLOCK = 1;
+    private static final int UPGRADED_COST = 3;
     private static int ACTION = -1;
 
     // /STAT DECLARATION/
@@ -99,7 +99,7 @@ public class CardIntermittentBug extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             this.upgradeName();
-            this.upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.upgradeBaseCost(UPGRADED_COST);
             this.initializeDescription();
         }
     }
