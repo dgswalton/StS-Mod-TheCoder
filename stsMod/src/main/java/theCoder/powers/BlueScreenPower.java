@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAndDeckAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.cards.status.Dazed;
@@ -66,9 +67,7 @@ public class BlueScreenPower extends AbstractPower {
             }
 
             this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(this.amount, true), DamageType.THORNS, AttackEffect.FIRE, true));
-            this.addToBot(new MakeTempCardInDrawPileAction(new Dazed(), 1, true,false, false));
-            this.addToBot(new MakeTempCardInDrawPileAction(new Burn(), 1, true, false, false));
-            this.addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, true, false, false));
+            this.addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 3, true, false, false));
         }
 
     }

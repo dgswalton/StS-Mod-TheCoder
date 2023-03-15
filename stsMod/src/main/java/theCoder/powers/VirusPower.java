@@ -32,6 +32,7 @@ public class VirusPower extends AbstractPower {
     private static final Texture tex32 = TextureLoader.getTexture("theCoderResources/images/powers/placeholder_power32.png");
     public VirusPower(final AbstractCreature owner, final AbstractCreature source) {
         this.name = NAME;
+        this.description = DESCRIPTIONS[0];
         this.ID = "VirusPower";
         this.owner = owner;
         this.source = source;

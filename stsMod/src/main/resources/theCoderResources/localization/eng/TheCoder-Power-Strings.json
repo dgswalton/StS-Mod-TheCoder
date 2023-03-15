@@ -22,6 +22,6 @@
 },
 "theCoder:BlueScreenPower": {
         "NAME": "Blue Screen",
-        "DESCRIPTIONS": ["At the end of your turn, deal ", " damage to ALL enemies then insert 1 dazed, burn, and void into your draw pile"]
+        "DESCRIPTIONS": ["At the end of your turn, deal ", " damage to ALL enemies then insert 3 voids into your draw pile"]
 }
 }

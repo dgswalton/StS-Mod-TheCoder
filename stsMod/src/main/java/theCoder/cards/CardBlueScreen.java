@@ -64,8 +64,6 @@ public class CardBlueScreen extends CustomCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         // making card do damage and gain block
         this.magicNumber = this.baseMagicNumber = DAMAGE_PER_TURN;
-        this.cardsToPreview = new Dazed();
-        this.cardsToPreview = new Burn();
         this.cardsToPreview = new VoidCard();
     }
 

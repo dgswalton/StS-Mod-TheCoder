@@ -164,7 +164,7 @@ public class TheCoder extends CustomPlayer {
         retVal.add(CardVirus.ID);
         retVal.add(CardDarkMode.ID);
         retVal.add(CardConditional.ID);
-        retVal.add(CardBlueScreen.ID);
+        retVal.add(CardPointer.ID);
         return retVal;
     }
 

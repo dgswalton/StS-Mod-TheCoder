@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theCoder.TheCoderMod;
+import theCoder.actions.ImportAction;
 import theCoder.characters.TheCoder;
 
 import static theCoder.TheCoderMod.makeCardPath;
@@ -55,14 +56,13 @@ public class CardImport extends CustomCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         // making card do damage and gain block
         this.magicNumber = this.baseMagicNumber = CARDS;
+        this.exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // This card will gain block
-        AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, baseBlock));
+        this.addToBot(new ImportAction(this.magicNumber, this.ID));
     }
 
     // Upgraded stats.
