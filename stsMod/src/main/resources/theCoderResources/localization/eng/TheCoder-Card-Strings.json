@@ -115,5 +115,17 @@
   "theCoder:CardBlueScreen": {
     "NAME": "Blue Screen",
     "DESCRIPTION": "At the end of your turn, deal !M! damage to ALL enemies; Insert 3 voids into your draw pile;"
+  },
+  "theCoder:CardStrikeIndex": {
+    "NAME": "Strike Index",
+    "DESCRIPTION": "Deal !D! damage;"
+  },
+  "theCoder:CardDefendIndex": {
+    "NAME": "Defend Index",
+    "DESCRIPTION": "Gain !B! block;"
+  },
+  "theCoder:CardBufferIndex": {
+    "NAME": "Buffer Index",
+    "DESCRIPTION": "Prevent the next !M! times you would lose HP;"
   }
 }

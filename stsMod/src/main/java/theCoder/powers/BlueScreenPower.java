@@ -40,7 +40,7 @@ public class BlueScreenPower extends AbstractPower {
     private static final Texture tex32 = TextureLoader.getTexture("theCoderResources/images/powers/placeholder_power32.png");
     public BlueScreenPower(final AbstractCreature owner, final int newAmount) {
         this.name = NAME;
-        this.ID = "DarkModePower";
+        this.ID = "BlueScreenPower";
         this.owner = owner;
         this.amount = newAmount;
         this.type = PowerType.BUFF;

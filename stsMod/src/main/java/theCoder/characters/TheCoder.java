@@ -157,14 +157,15 @@ public class TheCoder extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        retVal.add(DefaultSecondMagicNumberSkill.ID);
-        retVal.add(CardStrike.ID);
-        retVal.add(CardDefend.ID);
-        retVal.add(CardSort.ID);
+        //retVal.add(CardStrike.ID);
+        //retVal.add(CardDefend.ID);
         retVal.add(CardVirus.ID);
         retVal.add(CardDarkMode.ID);
         retVal.add(CardConditional.ID);
-        retVal.add(CardPointer.ID);
+        retVal.add(CardStrikeIndex.ID);
+        retVal.add(CardDefendIndex.ID);
+        retVal.add(CardBufferIndex.ID);
+        retVal.add(CardBlueScreen.ID);
         return retVal;
     }
 
