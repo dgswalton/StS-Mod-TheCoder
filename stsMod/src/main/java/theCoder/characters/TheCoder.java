@@ -29,6 +29,7 @@ import theCoder.relics.PlaceholderRelic;
 import theCoder.relics.PlaceholderRelic2;
 
 import java.util.ArrayList;
+import java.util.MissingFormatArgumentException;
 
 import static theCoder.TheCoderMod.*;
 import static theCoder.characters.TheCoder.Enums.COLOR_GRAY;
@@ -159,13 +160,13 @@ public class TheCoder extends CustomPlayer {
 
         //retVal.add(CardStrike.ID);
         //retVal.add(CardDefend.ID);
-        retVal.add(CardVirus.ID);
-        retVal.add(CardDarkMode.ID);
         retVal.add(CardConditional.ID);
         retVal.add(CardStrikeIndex.ID);
         retVal.add(CardDefendIndex.ID);
-        retVal.add(CardBufferIndex.ID);
-        retVal.add(CardBlueScreen.ID);
+        retVal.add(CardOverwork.ID);
+        retVal.add(CardOverheat.ID);
+        retVal.add(CardPython.ID);
+        retVal.add(CardJava.ID);
         return retVal;
     }
 

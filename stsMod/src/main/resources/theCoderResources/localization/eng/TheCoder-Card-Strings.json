@@ -117,40 +117,40 @@
     "DESCRIPTION": "At the end of your turn, deal !M! damage to ALL enemies and insert 3 voids into your draw pile;"
   },
   "theCoder:CardStrikeIndex": {
-    "NAME": "Strike Index",
-    "DESCRIPTION": "Deal index { !theCoder:IndexDamage0! , !theCoder:IndexDamage1! , !theCoder:IndexDamage2! , !theCoder:IndexDamage3! , !theCoder:IndexDamage4! } damage;"
+    "NAME": "Strike Array",
+    "DESCRIPTION": "Deal thecoder:index { !theCoder:IndexDamage0! , !theCoder:IndexDamage1! , !theCoder:IndexDamage2! , !theCoder:IndexDamage3! , !theCoder:IndexDamage4! } damage;"
   },
   "theCoder:CardDefendIndex": {
-    "NAME": "Defend Index",
-    "DESCRIPTION": "Gain index {4,8,12,16,20} block;",
-    "UPGRADE_DESCRIPTION": "Gain index {6,10,14,18,22} block;"
+    "NAME": "Defend Array",
+    "DESCRIPTION": "Gain thecoder:index {4,8,12,16,20} block;",
+    "UPGRADE_DESCRIPTION": "Gain thecoder:index {6,10,14,18,22} block;"
   },
   "theCoder:CardBufferIndex": {
-    "NAME": "Buffer Index",
-    "DESCRIPTION": "Prevent the next index {0,1,2,3,4} times you would lose HP;",
-    "UPGRADE_DESCRIPTION": "Prevent the next index {1,2,3,4,5} times you would lose HP;"
+    "NAME": "Buffer Array",
+    "DESCRIPTION": "Prevent the next thecoder:index {0,1,2,3,4} times you would lose HP;",
+    "UPGRADE_DESCRIPTION": "Prevent the next thecoder:index {1,2,3,4,5} times you would lose HP;"
   },
   "theCoder:CardDebuffIndex": {
-    "NAME": "Debuff Index",
-    "DESCRIPTION": "Apply index {\"1 weak\", \"1 vulnerable\", \"5 poison\", \"slow\", \"shifting exhaust\"} to an enemy;",
-    "UPGRADE_DESCRIPTION": "Apply index {\"2 weak\", \"2 vulnerable\", \"7 poison\", \"slow\", \"shifting exhaust\"} to an enemy;"
+    "NAME": "Debuff Array",
+    "DESCRIPTION": "Apply thecoder:index {\"1 weak\", \"1 vulnerable\", \"5 poison\", \"slow\", \"shifting exhaust\"} to an enemy;",
+    "UPGRADE_DESCRIPTION": "Apply thecoder:index {\"2 weak\", \"2 vulnerable\", \"7 poison\", \"slow\", \"shifting exhaust\"} to an enemy;"
   },
   "theCoder:CardOverheat": {
     "NAME": "Overheat",
-    "DESCRIPTION": "Deal !D! damage; NL Insert a burn in your draw and discard pile;"
+    "DESCRIPTION": "Deal !D! damage; NL Insert !M! burns into your discard pile;"
   },
   "theCoder:CardBuffIndex": {
-    "NAME": "Buff Index",
-    "DESCRIPTION": "Gain index {\"1 artifact\", \"2 plated armor\", \"2 regen\", \"1 ritual\", \"1 intangible exhaust\"};",
-    "UPGRADE_DESCRIPTION": "Gain index {\"2 artifact\", \"4 plated armor\", \"4 regen\", \"2 ritual\", \"2 intangible exhaust\"};"
+    "NAME": "Buff Array",
+    "DESCRIPTION": "Gain thecoder:index {\"1 artifact\", \"2 plated armor\", \"2 regen\", \"1 ritual\", \"1 intangible exhaust\"};",
+    "UPGRADE_DESCRIPTION": "Gain thecoder:index {\"2 artifact\", \"4 plated armor\", \"4 regen\", \"2 ritual\", \"2 intangible exhaust\"};"
   },
   "theCoder:CardManualIncrament": {
     "NAME": "Manual Increment",
-    "DESCRIPTION": "Always deal damage equal to twice your index value; Increase your index value by !M! (can exceed 4);"
+    "DESCRIPTION": "Always deal damage equal to twice your thecoder:index_value; Increase your thecoder:index_value by !M! (can exceed 4);"
   },
   "theCoder:CardFullyTraversed": {
     "NAME": "Fully Traversed",
-    "DESCRIPTION": "If your index value is 4 or greater, gain !M! strength and dexterity. Else, increase index value by !M! (can exceed 4);"
+    "DESCRIPTION": "If your thecoder:index_value is 4 or greater, gain !M! strength and dexterity. Else, increase thecoder:index_value by !M! (can exceed 4);"
   },
   "theCoder:CardMissingComments": {
     "NAME": "Missing Comments",
@@ -172,7 +172,37 @@
   },
   "theCoder:CardTechieForm": {
     "NAME": "Techie Form",
-    "DESCRIPTION": "Ethereal; NL At the of end of your turn, deal index {3,5,8,13,21} to ALL enemies;",
-    "UPGRADE_DESCRIPTION": "At the of end of your turn, deal index {3,5,8,13,21} to ALL enemies;"
+    "DESCRIPTION": "Ethereal; NL At the of end of your turn, deal thecoder:index {3,5,8,13,21} to ALL enemies;",
+    "UPGRADE_DESCRIPTION": "At the of end of your turn, deal thecoder:index {3,5,8,13,21} to ALL enemies;"
+  },
+  "theCoder:CardOverwork": {
+    "NAME": "Overwork",
+    "DESCRIPTION": "Draw !M! cards; NL Gain [E] [E] [E] ; NL Gain !M! strength and dexterity; NL Die next turn; NL Exhaust;",
+    "UPGRADE_DESCRIPTION": "Retain; NL Draw !M! cards; NL Gain [E] [E] [E] ; NL Gain !M! strength and dexterity; NL Die next turn; NL Exhaust;"
+  },
+  "theCoder:CardRestart": {
+    "NAME": "Restart",
+    "DESCRIPTION": "Everyone heals !M! and removes all powers; NL Exhaust;"
+  },
+  "theCoder:CardNull": {
+    "NAME": "Null",
+    "DESCRIPTION": "Deal !M! damage; NL Gain !M! block; NL Draw !M! cards; NL All values scale with only strength and dexterity;",
+    "UPGRADE_DESCRIPTION": "Deal !M! damage; NL Gain !M! block; NL Draw !M! cards; NL All values scale with only strength, dexterity, and thecoder:index_value;"
+  },
+  "theCoder:CardUnrealiablePower": {
+    "NAME": "Unreliable Power",
+    "DESCRIPTION": "Gain [E] [E] [E] ; NL Insert 0 to !M! voids into your discard pile;"
+  },
+  "theCoder:CardMalware": {
+    "NAME": "Malware",
+    "DESCRIPTION": "Everyone loses !M! strength this turn; NL Insert a dazed into your draw pile; NL Exhaust;"
+  },
+  "theCoder:CardPython": {
+    "NAME": "Python",
+    "DESCRIPTION": "More SPAM??? NL Deal !D! damage NL Apply !M! poison"
+  },
+  "theCoder:CardJava": {
+    "NAME": "Java",
+    "DESCRIPTION": "Drink some coffee; NL Deal !D! damage and apply the same amount of thecoder:boiling to an enemy;"
   }
 }

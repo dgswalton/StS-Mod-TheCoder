@@ -16,6 +16,19 @@ public abstract class AbstractDefaultCard extends CustomCard {
     public boolean upgradedDefaultSecondMagicNumber; // A boolean to check whether the number has been upgraded or not.
     public boolean isDefaultSecondMagicNumberModified; // A boolean to check whether the number has been modified or not, for coloring purposes. (red/green)
 
+    public int indexDamage0;
+    public int baseIndexDamage0;
+    public int indexDamage1;
+    public int baseIndexDamage1;
+    public int indexDamage2;
+    public int baseIndexDamage2;
+    public int indexDamage3;
+    public int baseIndexDamage3;
+    public int indexDamage4;
+    public int baseIndexDamage4;
+    public boolean upgradedIndexDamage;
+    public boolean isIndexDamageModified;
+
     public AbstractDefaultCard(final String id,
                                final String name,
                                final String img,
@@ -35,6 +48,7 @@ public abstract class AbstractDefaultCard extends CustomCard {
         isBlockModified = false;
         isMagicNumberModified = false;
         isDefaultSecondMagicNumberModified = false;
+        isIndexDamageModified = false;
     }
 
     public void displayUpgrades() { // Display the upgrade - when you click a card to upgrade it
@@ -43,6 +57,14 @@ public abstract class AbstractDefaultCard extends CustomCard {
             defaultSecondMagicNumber = defaultBaseSecondMagicNumber; // Show how the number changes, as out of combat, the base number of a card is shown.
             isDefaultSecondMagicNumberModified = true; // Modified = true, color it green to highlight that the number is being changed.
         }
+        if(upgradedIndexDamage){
+            indexDamage0 = baseIndexDamage0;
+            indexDamage1 = baseIndexDamage1;
+            indexDamage2 = baseIndexDamage2;
+            indexDamage3 = baseIndexDamage3;
+            indexDamage4 = baseIndexDamage4;
+            isIndexDamageModified = true;
+        }
 
     }
 
@@ -50,5 +72,18 @@ public abstract class AbstractDefaultCard extends CustomCard {
         defaultBaseSecondMagicNumber += amount; // Upgrade the number by the amount you provide in your card.
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber; // Set the number to be equal to the base value.
         upgradedDefaultSecondMagicNumber = true; // Upgraded = true - which does what the above method does.
+    }
+    public void upgradeIndexDamage(int amount){
+        baseIndexDamage0 += amount;
+        indexDamage0 = baseIndexDamage0;
+        baseIndexDamage1 += amount;
+        indexDamage1 = baseIndexDamage1;
+        baseIndexDamage2 += amount;
+        indexDamage2 = baseIndexDamage2;
+        baseIndexDamage3 += amount;
+        indexDamage3 = baseIndexDamage3;
+        baseIndexDamage4 += amount;
+        indexDamage4 = baseIndexDamage4;
+        upgradedIndexDamage = true;
     }
 }

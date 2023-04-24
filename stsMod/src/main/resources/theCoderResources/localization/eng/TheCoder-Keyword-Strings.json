@@ -16,5 +16,30 @@
       "multikeyword"
     ],
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
+  },
+  {
+    "PROPER_NAME": "Index",
+    "NAMES": [
+      "index",
+      "Index"
+    ],
+    "DESCRIPTION": "Use effect at current #yIndex #yValue, then increment it by #b1. #yIndex #yValue can not exceed #b4 (unless otherwise specified)."
+  },
+  {
+    "PROPER_NAME": "Index Value",
+    "NAMES": [
+      "index value",
+      "Index value",
+      "index_value"
+    ],
+    "DESCRIPTION": "The number on your #yIndex power. If you don't have an index power, #yIndex #yValue is #b0."
+  },
+  {
+    "PROPER_NAME": "Boiling",
+    "NAMES": [
+      "boiling",
+      "Boiling"
+    ],
+    "DESCRIPTION": "Boiling creatures lose HP at the start of their turn. Each turn, Boiling increments #b1"
   }
 ]

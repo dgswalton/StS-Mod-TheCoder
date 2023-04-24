@@ -49,6 +49,7 @@ public class IndexPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         AbstractPower hardCode = AbstractDungeon.player.getPower("HardCodePower");
         if(hardCode != null){
+            hardCode.flash();
             this.updateDescription();
             return;
         }

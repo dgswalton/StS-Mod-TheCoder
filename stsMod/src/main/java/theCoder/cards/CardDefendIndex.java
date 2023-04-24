@@ -40,6 +40,7 @@ public class CardDefendIndex extends CustomCard {
     // use JSON to get the name and description of card
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -107,6 +108,7 @@ public class CardDefendIndex extends CustomCard {
         if (!upgraded) {
             this.upgradeName();
             this.upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }

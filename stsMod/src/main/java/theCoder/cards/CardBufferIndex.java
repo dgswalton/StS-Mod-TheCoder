@@ -41,6 +41,7 @@ public class CardBufferIndex extends CustomCard {
     // use JSON to get the name and description of card
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -102,6 +103,7 @@ public class CardBufferIndex extends CustomCard {
         if (!upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(UPGRADE_PLUS_BUFFER);
+            this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }

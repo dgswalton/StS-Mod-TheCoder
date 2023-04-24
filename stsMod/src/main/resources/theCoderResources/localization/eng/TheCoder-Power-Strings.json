@@ -1,31 +1,39 @@
 {
-"theCoder:CommonPower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
-},
-"theCoder:RarePower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-},
-"theCoder:ForLoopPower": {
-        "NAME": "For Loop",
-        "DESCRIPTIONS": ["Your next ", " cards is played an additional time",
-                        " card is played an additional time"]
-},
-"theCoder:VirusPower": {
-        "NAME": "Virus",
-        "DESCRIPTIONS": ["Transfer all debuffs to a random enemy"]
-},
-"theCoder:DarkModePower": {
-        "NAME": "Dark Mode",
-        "DESCRIPTIONS": ["Cannot see enemy intents"]
-},
-"theCoder:BlueScreenPower": {
-        "NAME": "Blue Screen",
-        "DESCRIPTIONS": ["At the end of your turn, deal ", " damage to ALL enemies then insert 3 voids into your draw pile"]
-},
-"theCoder:IndexPower": {
-        "NAME": "Index",
-        "DESCRIPTIONS": ["Your current index is "]
-}
+        "theCoder:CommonPower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+        },
+        "theCoder:RarePower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+        },
+        "theCoder:ForLoopPower": {
+                "NAME": "For Loop",
+                "DESCRIPTIONS": ["Your next ", " cards is played an additional time",
+                                " card is played an additional time"]
+        },
+        "theCoder:VirusPower": {
+                "NAME": "Virus",
+                "DESCRIPTIONS": ["Transfer all debuffs to a random enemy"]
+        },
+        "theCoder:DarkModePower": {
+                "NAME": "Dark Mode",
+                "DESCRIPTIONS": ["Cannot see enemy intents"]
+        },
+        "theCoder:BlueScreenPower": {
+                "NAME": "Blue Screen",
+                "DESCRIPTIONS": ["At the end of your turn, deal ", " damage to ALL enemies then insert 3 voids into your draw pile"]
+        },
+        "theCoder:IndexPower": {
+                "NAME": "Index",
+                "DESCRIPTIONS": ["Your current index is "]
+        },
+        "theCoder:TechieFormPower": {
+                "NAME": "Techie Form",
+                "DESCRIPTIONS": ["At the of end of your turn, deal index {3,5,8,13,21} to ALL enemies"]
+        },
+        "theCoder:BoilingPower": {
+                "NAME": "Boiling",
+                "DESCRIPTIONS": ["At the start of turn, deal ", " damage to source and increase by 1"]
+        }
 }

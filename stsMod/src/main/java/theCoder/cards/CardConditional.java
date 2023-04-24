@@ -63,7 +63,10 @@ public class CardConditional extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(m.intent == AbstractMonster.Intent.ATTACK){
+        if(m.intent == AbstractMonster.Intent.ATTACK
+                || m.intent == AbstractMonster.Intent.ATTACK_BUFF
+                || m.intent == AbstractMonster.Intent.ATTACK_DEBUFF
+                || m.intent == AbstractMonster.Intent.ATTACK_DEFEND){
             AbstractDungeon.actionManager.addToBottom(
                     new GainBlockAction(p, p, this.block));
         }
