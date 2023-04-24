@@ -25,7 +25,7 @@ import theCoder.actions.ForLoopAction;
 import theCoder.characters.TheCoder;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardForLoop extends CustomCard {
+public class CardForLoop extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

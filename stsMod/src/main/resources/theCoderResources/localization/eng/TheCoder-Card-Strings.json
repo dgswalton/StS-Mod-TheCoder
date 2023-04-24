@@ -76,11 +76,11 @@
   },
   "theCoder:CardBasicBug": {
     "NAME": "Basic Bug",
-    "DESCRIPTION": "Unplayable; NL When you draw this play it; Deal !M! damage to self and !D! to random enemy; NL Exhaust;"
+    "DESCRIPTION": "Unplayable; NL Plays when drawn; NL Deal !M! damage to self and !D! to a random enemy; NL Exhaust;"
   },
   "theCoder:CardIntermittentBug": {
     "NAME": "Intermittent Bug",
-    "DESCRIPTION": "Does 1 randomly: NL Kill target non-boss enemy, Deal 20 damage, Give enemy 5 strength, Heal enemy for 20; NL Exhaust;"
+    "DESCRIPTION": "Does 1 randomly: NL Kill target non-boss enemy; NL Deal 20 damage; NL Give enemy 5 strength; NL Heal enemy for 20; NL Exhaust;"
   },
   "theCoder:CardForLoop": {
     "NAME": "For Loop",
@@ -117,21 +117,20 @@
     "DESCRIPTION": "At the end of your turn, deal !M! damage to ALL enemies and insert 3 voids into your draw pile;"
   },
   "theCoder:CardStrikeIndex": {
-    "NAME": "Strike Array",
-    "DESCRIPTION": "Deal thecoder:index { !theCoder:IndexDamage0! , !theCoder:IndexDamage1! , !theCoder:IndexDamage2! , !theCoder:IndexDamage3! , !theCoder:IndexDamage4! } damage;"
+    "NAME": "Strike [ ]",
+    "DESCRIPTION": "Deal thecoder:index {!theCoder:Index0!, !theCoder:Index1!, !theCoder:Index2!, !theCoder:Index3!, !theCoder:Index4!} damage;"
   },
   "theCoder:CardDefendIndex": {
-    "NAME": "Defend Array",
-    "DESCRIPTION": "Gain thecoder:index {4,8,12,16,20} block;",
-    "UPGRADE_DESCRIPTION": "Gain thecoder:index {6,10,14,18,22} block;"
+    "NAME": "Defend [ ]",
+    "DESCRIPTION": "Gain thecoder:index {!theCoder:Index0!, !theCoder:Index1!, !theCoder:Index2!, !theCoder:Index3!, !theCoder:Index4!} block;"
   },
   "theCoder:CardBufferIndex": {
-    "NAME": "Buffer Array",
-    "DESCRIPTION": "Prevent the next thecoder:index {0,1,2,3,4} times you would lose HP;",
-    "UPGRADE_DESCRIPTION": "Prevent the next thecoder:index {1,2,3,4,5} times you would lose HP;"
+    "NAME": "Buffer [ ]",
+    "DESCRIPTION": "Prevent the next thecoder:index {0, 1, 2, 3, 4} times you would lose HP;",
+    "UPGRADE_DESCRIPTION": "Prevent the next NL thecoder:index {1, 2, 3, 4, 5} NL times you would lose HP;"
   },
   "theCoder:CardDebuffIndex": {
-    "NAME": "Debuff Array",
+    "NAME": "Debuff [ ]",
     "DESCRIPTION": "Apply thecoder:index {\"1 weak\", \"1 vulnerable\", \"5 poison\", \"slow\", \"shifting exhaust\"} to an enemy;",
     "UPGRADE_DESCRIPTION": "Apply thecoder:index {\"2 weak\", \"2 vulnerable\", \"7 poison\", \"slow\", \"shifting exhaust\"} to an enemy;"
   },
@@ -140,17 +139,17 @@
     "DESCRIPTION": "Deal !D! damage; NL Insert !M! burns into your discard pile;"
   },
   "theCoder:CardBuffIndex": {
-    "NAME": "Buff Array",
+    "NAME": "Buff [ ]",
     "DESCRIPTION": "Gain thecoder:index {\"1 artifact\", \"2 plated armor\", \"2 regen\", \"1 ritual\", \"1 intangible exhaust\"};",
     "UPGRADE_DESCRIPTION": "Gain thecoder:index {\"2 artifact\", \"4 plated armor\", \"4 regen\", \"2 ritual\", \"2 intangible exhaust\"};"
   },
   "theCoder:CardManualIncrament": {
     "NAME": "Manual Increment",
-    "DESCRIPTION": "Always deal damage equal to twice your thecoder:index_value; Increase your thecoder:index_value by !M! (can exceed 4);"
+    "DESCRIPTION": "Always deal damage equal to twice your thecoder:index_value; NL Increase your thecoder:index_value by !M!;"
   },
   "theCoder:CardFullyTraversed": {
     "NAME": "Fully Traversed",
-    "DESCRIPTION": "If your thecoder:index_value is 4 or greater, gain !M! strength and dexterity. Else, increase thecoder:index_value by !M! (can exceed 4);"
+    "DESCRIPTION": "If your thecoder:index_value is 4 or greater, gain !M! strength and dexterity. Else, increase thecoder:index_value by !M!;"
   },
   "theCoder:CardMissingComments": {
     "NAME": "Missing Comments",
@@ -212,5 +211,9 @@
   "theCoder:CardKillall9": {
     "NAME": "[TESTING] Killall -9",
     "DESCRIPTION": "[TESTING] Kill all processes immediately; Test Custom Variable: index {!theCoder:TEST_VAR!,!theCoder:TEST_VAR!,!theCoder:TEST_VAR!};"
+  },
+  "theCoder:CardMatrix": {
+    "NAME": "[R][C]",
+    "DESCRIPTION": "Deal thecoder:index {!theCoder:Index0!, !theCoder:Index1!, !theCoder:Index2!, !theCoder:Index3!, !theCoder:Index4!} damage; NL Gain thecoder:index {!theCoder:SecIndex0!, !theCoder:SecIndex1!, !theCoder:SecIndex2!, !theCoder:SecIndex3!, !theCoder:SecIndex4!} block; NL Happens at same thecoder:index_value;"
   }
 }

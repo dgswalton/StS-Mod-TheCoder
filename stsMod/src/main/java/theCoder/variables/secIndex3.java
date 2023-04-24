@@ -2,17 +2,18 @@ package theCoder.variables;
 
 import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import theCoder.cards.AbstractCoderCard;
 import theCoder.cards.AbstractDefaultCard;
 
 import static theCoder.TheCoderMod.makeID;
 
-public class IndexDamage2 extends DynamicVariable {
+public class secIndex3 extends DynamicVariable {
 
     //For in-depth comments, check the other variable(DefaultCustomVariable). It's nearly identical.
 
     @Override
     public String key() {
-        return makeID("IndexDamage2");
+        return makeID("SecIndex3");
         // This is what you put between "!!" in your card strings to actually display the number.
         // You can name this anything (no spaces), but please pre-phase it with your mod name as otherwise mod conflicts can occur.
         // Remember, we're using makeID so it automatically puts "theDefault:" (or, your id) before the name.
@@ -20,22 +21,21 @@ public class IndexDamage2 extends DynamicVariable {
 
     @Override
     public boolean isModified(AbstractCard card) {
-        return ((AbstractDefaultCard) card).isIndexDamageModified;
-
+        return ((AbstractCoderCard) card).secIsIndexModified;
     }
 
     @Override
     public int value(AbstractCard card) {
-        return ((AbstractDefaultCard) card).indexDamage2;
+        return ((AbstractCoderCard) card).secIndex3;
     }
 
     @Override
     public int baseValue(AbstractCard card) {
-        return ((AbstractDefaultCard) card).baseIndexDamage2;
+        return ((AbstractCoderCard) card).secBaseIndex3;
     }
 
     @Override
     public boolean upgraded(AbstractCard card) {
-        return ((AbstractDefaultCard) card).upgradedIndexDamage;
+        return ((AbstractCoderCard) card).secUpgradedIndex;
     }
 }

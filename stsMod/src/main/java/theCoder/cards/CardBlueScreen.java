@@ -28,7 +28,7 @@ import theCoder.powers.BlueScreenPower;
 import theCoder.powers.DarkModePower;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardBlueScreen extends CustomCard {
+public class CardBlueScreen extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

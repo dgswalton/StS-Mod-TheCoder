@@ -21,7 +21,7 @@ import theCoder.TheCoderMod;
 import theCoder.characters.TheCoder;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardRunTimeError extends CustomCard {
+public class CardRunTimeError extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

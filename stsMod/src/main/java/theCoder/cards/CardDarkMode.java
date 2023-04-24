@@ -26,7 +26,7 @@ import theCoder.characters.TheCoder;
 import theCoder.powers.DarkModePower;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardDarkMode extends CustomCard {
+public class CardDarkMode extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

@@ -26,7 +26,7 @@ import theCoder.characters.TheCoder;
 import java.util.Iterator;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardDebug extends CustomCard {
+public class CardDebug extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

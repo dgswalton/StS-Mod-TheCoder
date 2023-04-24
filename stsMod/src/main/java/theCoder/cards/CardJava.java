@@ -27,7 +27,7 @@ import theCoder.characters.TheCoder;
 import theCoder.powers.BoilingPower;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardJava extends CustomCard {
+public class CardJava extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

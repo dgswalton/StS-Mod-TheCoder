@@ -30,9 +30,7 @@ import theCoder.relics.PlaceholderRelic;
 import theCoder.relics.PlaceholderRelic2;
 import theCoder.util.IDCheckDontTouchPls;
 import theCoder.util.TextureLoader;
-import theCoder.variables.DefaultCustomVariable;
-import theCoder.variables.DefaultSecondMagicNumber;
-import theCoder.variables.CVTestVar;
+import theCoder.variables.*;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -428,6 +426,16 @@ public class TheCoderMod implements
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
 
         BaseMod.addDynamicVariable(new CVTestVar());
+        BaseMod.addDynamicVariable(new Index0());
+        BaseMod.addDynamicVariable(new Index1());
+        BaseMod.addDynamicVariable(new Index2());
+        BaseMod.addDynamicVariable(new Index3());
+        BaseMod.addDynamicVariable(new Index4());
+        BaseMod.addDynamicVariable(new secIndex0());
+        BaseMod.addDynamicVariable(new secIndex1());
+        BaseMod.addDynamicVariable(new secIndex2());
+        BaseMod.addDynamicVariable(new secIndex3());
+        BaseMod.addDynamicVariable(new secIndex4());
 //        System.out.print(" -> Added: >");
 //        System.out.print(new CVTestVar().key());
 //        System.out.println("<");

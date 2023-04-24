@@ -23,7 +23,7 @@ import theCoder.characters.TheCoder;
 import theCoder.powers.VirusPower;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardVirus extends CustomCard {
+public class CardVirus extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

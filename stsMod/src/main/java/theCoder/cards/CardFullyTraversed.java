@@ -26,7 +26,7 @@ import theCoder.characters.TheCoder;
 import theCoder.powers.IndexPower;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardFullyTraversed extends CustomCard {
+public class CardFullyTraversed extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

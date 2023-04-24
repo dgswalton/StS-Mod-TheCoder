@@ -20,7 +20,7 @@ import theCoder.characters.TheCoder;
 import java.util.Random;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardIntermittentBug extends CustomCard {
+public class CardIntermittentBug extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

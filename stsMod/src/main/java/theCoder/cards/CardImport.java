@@ -20,7 +20,7 @@ import theCoder.actions.ImportAction;
 import theCoder.characters.TheCoder;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardImport extends CustomCard {
+public class CardImport extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

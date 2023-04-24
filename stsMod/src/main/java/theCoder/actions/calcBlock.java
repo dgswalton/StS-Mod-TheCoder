@@ -20,41 +20,23 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 import theCoder.powers.ForLoopPower;
 
-public class calcDamage {
+public class calcBlock {
     private AbstractPlayer player;
-    private AbstractMonster monster;
-    public calcDamage(AbstractPlayer p, AbstractMonster m) {
+    public calcBlock(AbstractPlayer p) {
         this.player = p;
-        this.monster = m;
     }
 
-    public int calculateDamage(int d) {
-        double damage = d;
-        AbstractPower strength = this.player.getPower("Strength");
-        if(strength != null){
-            damage += strength.amount;
+    public int calculateBlock(int b) {
+        double block = b;
+        AbstractPower dexterity = this.player.getPower("Dexterity");
+        if(dexterity != null){
+            block += dexterity.amount;
         }
-        if(this.monster != null){
-            AbstractPower vulnerable = this.monster.getPower("Vulnerable");
-            AbstractRelic frog = this.player.getRelic("Paper Frog");
-            if(vulnerable != null){
-                if(frog != null){
-                    damage = (damage *7) /4;
-                } else {
-                    damage = (damage *3) /2;
-                }
-            }
+        AbstractPower frail = this.player.getPower("Frail");
+        if(frail != null){
+            block = (block *3) /4;
         }
-        AbstractPower weak = this.player.getPower("Weak");
-        if(weak != null){
-            damage = (damage *3) /4;
-        }
-        if(this.player.stance.ID.equals("Wrath")){
-            damage *= 2;
-        } else if(this.player.stance.ID.equals("Divinity")){
-            damage *= 3;
-        }
-        return (int) damage;
+        return (int) block;
     }
 }
 

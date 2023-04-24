@@ -158,7 +158,7 @@ public class TheCoder extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        int testingSet = 2; // Testing Configuration, 1: Jayce; 2: Dad
+        int testingSet = 1; // Testing Configuration, 1: Jayce; 2: Dad
 
         if (testingSet == 1) {
             //retVal.add(CardStrike.ID);
@@ -170,6 +170,7 @@ public class TheCoder extends CustomPlayer {
             retVal.add(CardOverheat.ID);
             retVal.add(CardPython.ID);
             retVal.add(CardJava.ID);
+            retVal.add(CardVirus.ID);
         }
         else if (testingSet == 2) {
             //retVal.add(CardPointer.ID);

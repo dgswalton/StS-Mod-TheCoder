@@ -15,7 +15,7 @@ import theCoder.characters.TheCoder;
 import java.util.Iterator;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardPointer extends CustomCard implements OnObtainCard {
+public class CardPointer extends AbstractCoderCard implements OnObtainCard {
     public static final String ID = TheCoderMod.makeID(CardPointer.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     // path to picture

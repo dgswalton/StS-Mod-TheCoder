@@ -26,7 +26,7 @@ import theCoder.characters.TheCoder;
 import java.util.Random;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardUnrealiablePower extends CustomCard {
+public class CardUnrealiablePower extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

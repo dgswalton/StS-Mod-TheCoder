@@ -22,6 +22,31 @@ public abstract class AbstractCoderCard extends CustomCard {
 //    public int[] indexList = new int[4];
 //    public int curIdx = 0;
 
+    public int index0;
+    public int baseIndex0;
+    public int index1;
+    public int baseIndex1;
+    public int index2;
+    public int baseIndex2;
+    public int index3;
+    public int baseIndex3;
+    public int index4;
+    public int baseIndex4;
+    public boolean upgradedIndex;
+    public boolean isIndexModified;
+    public int secIndex0;
+    public int secBaseIndex0;
+    public int secIndex1;
+    public int secBaseIndex1;
+    public int secIndex2;
+    public int secBaseIndex2;
+    public int secIndex3;
+    public int secBaseIndex3;
+    public int secIndex4;
+    public int secBaseIndex4;
+    public boolean secUpgradedIndex;
+    public boolean secIsIndexModified;
+
     // /CUSTOM VARIABLE/
 
     public AbstractCoderCard(final String id,
@@ -44,6 +69,18 @@ public abstract class AbstractCoderCard extends CustomCard {
         isMagicNumberModified = false;
         isDefaultSecondMagicNumberModified = false;
         testVar = -1;
+        isIndexModified = false;
+        index0 = baseIndex0 = 0;
+        index1 = baseIndex1 = 0;
+        index2 = baseIndex2 = 0;
+        index3 = baseIndex3 = 0;
+        index4 = baseIndex4 = 0;
+        secIsIndexModified = false;
+        secIndex0 = secBaseIndex0 = 0;
+        secIndex1 = secBaseIndex1 = 0;
+        secIndex2 = secBaseIndex2 = 0;
+        secIndex3 = secBaseIndex3 = 0;
+        secIndex4 = secBaseIndex4 = 0;
     }
 
     public void updateDisplayName(String sBaseName) { // Get the display name for this card, including whether it is being pointed to
@@ -57,6 +94,22 @@ public abstract class AbstractCoderCard extends CustomCard {
             defaultSecondMagicNumber = defaultBaseSecondMagicNumber; // Show how the number changes, as out of combat, the base number of a card is shown.
             isDefaultSecondMagicNumberModified = true; // Modified = true, color it green to highlight that the number is being changed.
         }
+        if(upgradedIndex){
+            index0 = baseIndex0;
+            index1 = baseIndex1;
+            index2 = baseIndex2;
+            index3 = baseIndex3;
+            index4 = baseIndex4;
+            isIndexModified = true;
+        }
+        if(secUpgradedIndex){
+            secIndex0 = secBaseIndex0;
+            secIndex1 = secBaseIndex1;
+            secIndex2 = secBaseIndex2;
+            secIndex3 = secBaseIndex3;
+            secIndex4 = secBaseIndex4;
+            secIsIndexModified = true;
+        }
 
     }
 
@@ -64,5 +117,31 @@ public abstract class AbstractCoderCard extends CustomCard {
         defaultBaseSecondMagicNumber += amount; // Upgrade the number by the amount you provide in your card.
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber; // Set the number to be equal to the base value.
         upgradedDefaultSecondMagicNumber = true; // Upgraded = true - which does what the above method does.
+    }
+    public void upgradeIndex(int amount){
+        baseIndex0 += amount;
+        index0 = baseIndex0;
+        baseIndex1 += amount;
+        index1 = baseIndex1;
+        baseIndex2 += amount;
+        index2 = baseIndex2;
+        baseIndex3 += amount;
+        index3 = baseIndex3;
+        baseIndex4 += amount;
+        index4 = baseIndex4;
+        upgradedIndex = true;
+    }
+    public void upgradeSecIndex(int amount){
+        secBaseIndex0 += amount;
+        secIndex0 = secBaseIndex0;
+        secBaseIndex1 += amount;
+        secIndex1 = secBaseIndex1;
+        secBaseIndex2 += amount;
+        secIndex2 = secBaseIndex2;
+        secBaseIndex3 += amount;
+        secIndex3 = secBaseIndex3;
+        secBaseIndex4 += amount;
+        secIndex4 = secBaseIndex4;
+        secUpgradedIndex = true;
     }
 }

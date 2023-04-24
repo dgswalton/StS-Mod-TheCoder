@@ -27,7 +27,7 @@ import theCoder.powers.RarePower;
 
 import static theCoder.TheCoderMod.PLACEHOLDER_POTION_HYBRID;
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardMissingComments extends CustomCard {
+public class CardMissingComments extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

@@ -27,7 +27,7 @@ import theCoder.powers.TechieFormPower;
 
 import static theCoder.TheCoderMod.PLACEHOLDER_POTION_HYBRID;
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardTechieForm extends CustomCard {
+public class CardTechieForm extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

@@ -24,7 +24,7 @@ import theCoder.characters.TheCoder;
 import theCoder.powers.IndexPower;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardManualIncrament extends CustomCard {
+public class CardManualIncrament extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
