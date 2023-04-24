@@ -1,0 +1,20 @@
+{
+  "theCoder:TheCoderModifiers": {
+    "TEXT": [
+      " NL Apply ",
+      " ${ModID}:Frostbite.",
+      "Retain. NL ",
+      " NL Play ",
+      " NL Gain 6 Block.",
+      " NL Gain 8 Block.",
+      " NL Play again, unmodified.",
+      " NL Gain a *Cannonball.",
+      " NL Draw a card."
+    ]
+  },
+  "theCoder:AddModifierUI": {
+    "TEXT": [
+      "Choose a card to Modify."
+    ]
+  }
+}
