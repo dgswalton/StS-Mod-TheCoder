@@ -204,5 +204,13 @@
   "theCoder:CardJava": {
     "NAME": "Java",
     "DESCRIPTION": "Drink some coffee; NL Deal !D! damage and apply the same amount of thecoder:boiling to an enemy;"
+  },
+  "theCoder:CardPointer": {
+    "NAME": "[IN PROCESS] Pointer",
+    "DESCRIPTION": "[IN PROCESS] On pick up, choose another card in your deck. This becomes a copy. Upgrading resets pointer. Currently points to "
+  },
+  "theCoder:CardKillall9": {
+    "NAME": "[TESTING] Killall -9",
+    "DESCRIPTION": "[TESTING] Kill all processes immediately; Test Custom Variable: !theCoder:TEST_VAR!;"
   }
 }

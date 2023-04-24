@@ -32,6 +32,7 @@ import theCoder.util.IDCheckDontTouchPls;
 import theCoder.util.TextureLoader;
 import theCoder.variables.DefaultCustomVariable;
 import theCoder.variables.DefaultSecondMagicNumber;
+import theCoder.variables.CVTestVar;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -425,7 +426,12 @@ public class TheCoderMod implements
         // Add the Custom Dynamic variables
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
-        
+
+        BaseMod.addDynamicVariable(new CVTestVar());
+//        System.out.print(" -> Added: >");
+//        System.out.print(new CVTestVar().key());
+//        System.out.println("<");
+
         logger.info("Adding cards");
         // Add the cards
         // Don't delete these default cards yet. You need 1 of each type and rarity (technically) for your game not to crash

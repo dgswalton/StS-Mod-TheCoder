@@ -158,15 +158,24 @@ public class TheCoder extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        //retVal.add(CardStrike.ID);
-        //retVal.add(CardDefend.ID);
-        retVal.add(CardConditional.ID);
-        retVal.add(CardStrikeIndex.ID);
-        retVal.add(CardDefendIndex.ID);
-        retVal.add(CardOverwork.ID);
-        retVal.add(CardOverheat.ID);
-        retVal.add(CardPython.ID);
-        retVal.add(CardJava.ID);
+        int testingSet = 2; // 1: Jayce; 2: Dad
+
+        if (testingSet == 1) {
+            //retVal.add(CardStrike.ID);
+            //retVal.add(CardDefend.ID);
+            retVal.add(CardConditional.ID);
+            retVal.add(CardStrikeIndex.ID);
+            retVal.add(CardDefendIndex.ID);
+            retVal.add(CardOverwork.ID);
+            retVal.add(CardOverheat.ID);
+            retVal.add(CardPython.ID);
+            retVal.add(CardJava.ID);
+        }
+        else if (testingSet == 2) {
+            //retVal.add(CardPointer.ID);
+            retVal.add(CardKillall9.ID);
+        }
+
         return retVal;
     }
 

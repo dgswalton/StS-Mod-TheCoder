@@ -2,14 +2,8 @@ package theCoder.cards;
 
 // Type: Common Attack
 // Cost: 2
-// Description: Deal 8 damage; Gain 8 block;
-// Upgrade: Cost -> 1
+// Description: [TESTING] Kill all monster processes; Testing dynamic variable: !theCoder:TEST_VAR!;
 
-import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -68,9 +62,7 @@ public class CardKillall9 extends AbstractCoderCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // This card will deal damage and have an animation
-        AbstractDungeon.getMonsters().monsters.forEach(monster -> {
-            monster.die();
-        });
+        AbstractDungeon.getMonsters().monsters.forEach(monster -> monster.die());
     }
 
     @Override
