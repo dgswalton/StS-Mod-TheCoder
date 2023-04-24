@@ -158,7 +158,7 @@ public class TheCoder extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        int testingSet = 2; // 1: Jayce; 2: Dad
+        int testingSet = 2; // Testing Configuration, 1: Jayce; 2: Dad
 
         if (testingSet == 1) {
             //retVal.add(CardStrike.ID);

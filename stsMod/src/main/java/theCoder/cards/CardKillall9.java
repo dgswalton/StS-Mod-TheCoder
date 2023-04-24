@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theCoder.TheCoderMod;
 import theCoder.characters.TheCoder;
+import theCoder.helpers.TheCoderCardTags;
 
 import static theCoder.TheCoderMod.makeCardPath;
 public class CardKillall9 extends AbstractCoderCard {
@@ -54,8 +55,16 @@ public class CardKillall9 extends AbstractCoderCard {
         this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(CardTags.STRIKE);
 
+        // Add a custom tag
+        tags.add(TheCoderCardTags.TEST_TAG);
+
         // Update the testing Custom Variable
-        this.testVar = 420;
+        this.testVar = 4200;
+
+        // Add 1 if the custom tag was successfully applied
+        if (hasTag(TheCoderCardTags.TEST_TAG)) {
+            this.testVar++;
+        }
     }
 
     // Actions the card should do.
