@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class TheCoderCardTags {
 
+    @SpireEnum public static AbstractCard.CardTags POINTER_TARGET;
     @SpireEnum public static AbstractCard.CardTags TEST_TAG;
 
     public TheCoderCardTags() {

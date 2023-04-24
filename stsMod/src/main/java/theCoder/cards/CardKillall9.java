@@ -65,6 +65,10 @@ public class CardKillall9 extends AbstractCoderCard {
         if (hasTag(TheCoderCardTags.TEST_TAG)) {
             this.testVar++;
         }
+
+        // [Testing] Add the Pointer tag and update the card name
+//        tags.add(TheCoderCardTags.POINTER_TARGET); // This card was pointed to using the card Pointer
+//        updateDisplayName(NAME);
     }
 
     // Actions the card should do.

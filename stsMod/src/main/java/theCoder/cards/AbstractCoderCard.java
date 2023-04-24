@@ -1,5 +1,6 @@
 package theCoder.cards;
 import basemod.abstracts.CustomCard;
+import theCoder.helpers.TheCoderCardTags;
 
 public abstract class AbstractCoderCard extends CustomCard {
 
@@ -18,6 +19,8 @@ public abstract class AbstractCoderCard extends CustomCard {
 
     // CUSTOM VARIABLE
     public int testVar; // testing custom variable
+//    public int[] indexList = new int[4];
+//    public int curIdx = 0;
 
     // /CUSTOM VARIABLE/
 
@@ -41,6 +44,11 @@ public abstract class AbstractCoderCard extends CustomCard {
         isMagicNumberModified = false;
         isDefaultSecondMagicNumberModified = false;
         testVar = -1;
+    }
+
+    public void updateDisplayName(String sBaseName) { // Get the display name for this card, including whether it is being pointed to
+        name = (hasTag(TheCoderCardTags.POINTER_TARGET) ? "Pointer -> " : "") + sBaseName;
+        this.initializeTitle();
     }
 
     public void displayUpgrades() { // Display the upgrade - when you click a card to upgrade it

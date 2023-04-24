@@ -211,6 +211,6 @@
   },
   "theCoder:CardKillall9": {
     "NAME": "[TESTING] Killall -9",
-    "DESCRIPTION": "[TESTING] Kill all processes immediately; Test Custom Variable: !theCoder:TEST_VAR!;"
+    "DESCRIPTION": "[TESTING] Kill all processes immediately; Test Custom Variable: index {!theCoder:TEST_VAR!,!theCoder:TEST_VAR!,!theCoder:TEST_VAR!};"
   }
 }
