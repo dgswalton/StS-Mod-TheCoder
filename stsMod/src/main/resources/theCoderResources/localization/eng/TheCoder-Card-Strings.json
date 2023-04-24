@@ -56,7 +56,7 @@
   },
   "theCoder:CardByte": {
     "NAME": "Byte",
-    "DESCRIPTION": "Deal !D! damage; Gain !B! block;"
+    "DESCRIPTION": "Deal !D! damage; NL Gain !B! block;"
   },
   "theCoder:CardSyntaxError": {
     "NAME": "Syntax Error",
@@ -64,7 +64,7 @@
   },
   "theCoder:CardRunTimeError": {
     "NAME": "RunTimeError",
-    "DESCRIPTION": "Deal !D! damage !M! times; Exhaust;"
+    "DESCRIPTION": "Deal !D! damage !M! times; NL Exhaust;"
   },
   "theCoder:CardStrike": {
     "NAME": "Strike",
@@ -76,56 +76,103 @@
   },
   "theCoder:CardBasicBug": {
     "NAME": "Basic Bug",
-    "DESCRIPTION": "Unplayable; When you draw this play it; Deal !M! damage to self and !D! to random enemy; Exhaust;"
+    "DESCRIPTION": "Unplayable; NL When you draw this play it; Deal !M! damage to self and !D! to random enemy; NL Exhaust;"
   },
   "theCoder:CardIntermittentBug": {
     "NAME": "Intermittent Bug",
-    "DESCRIPTION": "Does 1 randomly: Kill target non-boss enemy, Deal 20 damage, Give enemy 5 strength, Heal enemy for 20; Exhaust;"
+    "DESCRIPTION": "Does 1 randomly: NL Kill target non-boss enemy, Deal 20 damage, Give enemy 5 strength, Heal enemy for 20; NL Exhaust;"
   },
   "theCoder:CardForLoop": {
     "NAME": "For Loop",
-    "DESCRIPTION": "The next X cards are played twice; Exhaust;",
-    "UPGRADE_DESCRIPTION": "The next X+1 cards are played twice; Exhaust;"
+    "DESCRIPTION": "The next X cards are played twice; NL Exhaust;",
+    "UPGRADE_DESCRIPTION": "The next X+1 cards are played twice; NL Exhaust;"
   },
   "theCoder:CardUpgradeSystems": {
     "NAME": "Upgrade Systems",
-    "DESCRIPTION": "Gain !M! strength and dexterity; Insert 4 dazed into your draw pile;"
+    "DESCRIPTION": "Gain !M! strength and dexterity; NL Insert 4 dazed into your draw pile;"
   },
   "theCoder:CardSort": {
     "NAME": "Sort",
     "DESCRIPTION": "Scry your draw pile;",
-    "UPGRADE_DESCRIPTION": "Innate; Scry your draw pile;"
+    "UPGRADE_DESCRIPTION": "Innate; NL Scry your draw pile;"
   },
   "theCoder:CardVirus": {
     "NAME": "Virus",
-    "DESCRIPTION": "Apply !M! weak and vulnerable; If the enemy dies, transfer all debuffs to a random enemy;"
+    "DESCRIPTION": "Apply !M! weak and vulnerable; NL If the enemy dies, transfer all debuffs to a random enemy;"
   },
   "theCoder:CardImport": {
     "NAME": "Import",
-    "DESCRIPTION": "Choose 1 of !M! random cards to add to your hand; Exhaust;"
+    "DESCRIPTION": "Choose 1 of !M! random cards to add to your hand; NL Exhaust;"
   },
   "theCoder:CardDarkMode": {
     "NAME": "Dark Mode",
-    "DESCRIPTION": "Lose ability to see enemy intents; Gain !M! strength and dexterity;"
+    "DESCRIPTION": "Lose ability to see enemy intents; NL Gain !M! strength and dexterity;"
   },
   "theCoder:CardConditional": {
     "NAME": "Conditional",
-    "DESCRIPTION": "If the enemy intends to attack, gain !B! block; Else, deal !D! damage;"
+    "DESCRIPTION": "If the enemy intends to attack, gain !B! block; NL Else, deal !D! damage;"
   },
   "theCoder:CardBlueScreen": {
     "NAME": "Blue Screen",
-    "DESCRIPTION": "At the end of your turn, deal !M! damage to ALL enemies; Insert 3 voids into your draw pile;"
+    "DESCRIPTION": "At the end of your turn, deal !M! damage to ALL enemies and insert 3 voids into your draw pile;"
   },
   "theCoder:CardStrikeIndex": {
     "NAME": "Strike Index",
-    "DESCRIPTION": "Deal !D! damage;"
+    "DESCRIPTION": "Deal index { !theCoder:IndexDamage0! , !theCoder:IndexDamage1! , !theCoder:IndexDamage2! , !theCoder:IndexDamage3! , !theCoder:IndexDamage4! } damage;"
   },
   "theCoder:CardDefendIndex": {
     "NAME": "Defend Index",
-    "DESCRIPTION": "Gain !B! block;"
+    "DESCRIPTION": "Gain index {4,8,12,16,20} block;",
+    "UPGRADE_DESCRIPTION": "Gain index {6,10,14,18,22} block;"
   },
   "theCoder:CardBufferIndex": {
     "NAME": "Buffer Index",
-    "DESCRIPTION": "Prevent the next !M! times you would lose HP;"
+    "DESCRIPTION": "Prevent the next index {0,1,2,3,4} times you would lose HP;",
+    "UPGRADE_DESCRIPTION": "Prevent the next index {1,2,3,4,5} times you would lose HP;"
+  },
+  "theCoder:CardDebuffIndex": {
+    "NAME": "Debuff Index",
+    "DESCRIPTION": "Apply index {\"1 weak\", \"1 vulnerable\", \"5 poison\", \"slow\", \"shifting exhaust\"} to an enemy;",
+    "UPGRADE_DESCRIPTION": "Apply index {\"2 weak\", \"2 vulnerable\", \"7 poison\", \"slow\", \"shifting exhaust\"} to an enemy;"
+  },
+  "theCoder:CardOverheat": {
+    "NAME": "Overheat",
+    "DESCRIPTION": "Deal !D! damage; NL Insert a burn in your draw and discard pile;"
+  },
+  "theCoder:CardBuffIndex": {
+    "NAME": "Buff Index",
+    "DESCRIPTION": "Gain index {\"1 artifact\", \"2 plated armor\", \"2 regen\", \"1 ritual\", \"1 intangible exhaust\"};",
+    "UPGRADE_DESCRIPTION": "Gain index {\"2 artifact\", \"4 plated armor\", \"4 regen\", \"2 ritual\", \"2 intangible exhaust\"};"
+  },
+  "theCoder:CardManualIncrament": {
+    "NAME": "Manual Increment",
+    "DESCRIPTION": "Always deal damage equal to twice your index value; Increase your index value by !M! (can exceed 4);"
+  },
+  "theCoder:CardFullyTraversed": {
+    "NAME": "Fully Traversed",
+    "DESCRIPTION": "If your index value is 4 or greater, gain !M! strength and dexterity. Else, increase index value by !M! (can exceed 4);"
+  },
+  "theCoder:CardMissingComments": {
+    "NAME": "Missing Comments",
+    "DESCRIPTION": "You become confused;",
+    "UPGRADE_DESCRIPTION": "Innate; NL You become confused;"
+  },
+  "theCoder:CardIntigerOverflow": {
+    "NAME": "Integer Overflow",
+    "DESCRIPTION": "Gain !B! block and permanently increase this by !M! block; NL If this card exceeds 20 block, reset it to 2;"
+  },
+  "theCoder:CardStackOverflow": {
+    "NAME": "Stack Overflow",
+    "DESCRIPTION": "Everything you'll ever need; NL Draw !M! cards; NL Deal !D! damage; NL Gain !B! block;"
+  },
+  "theCoder:CardDebug": {
+    "NAME": "Debug",
+    "DESCRIPTION": "Exhaust a card; NL If it was a curse or status card, gain 1 strength and dexterity;",
+    "UPGRADE_DESCRIPTION": "Exhaust a card; NL If it was a curse or status card, gain 1 strength, dexterity, and artifact;"
+  },
+  "theCoder:CardTechieForm": {
+    "NAME": "Techie Form",
+    "DESCRIPTION": "Ethereal; NL At the of end of your turn, deal index {3,5,8,13,21} to ALL enemies;",
+    "UPGRADE_DESCRIPTION": "At the of end of your turn, deal index {3,5,8,13,21} to ALL enemies;"
   }
 }
