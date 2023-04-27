@@ -14,14 +14,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.watcher.EndTurnDeathPower;
 import theCoder.TheCoderMod;
 import theCoder.characters.TheCoder;
+import theCoder.powers.LoseDrawNextTurn;
+import theCoder.powers.LoseEnergyNextTurn;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardOverwork extends AbstractCoderCard {
+public class CardCaffeineBoost extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -29,7 +28,7 @@ public class CardOverwork extends AbstractCoderCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = TheCoderMod.makeID(CardOverwork.class.getSimpleName());
+    public static final String ID = TheCoderMod.makeID(CardCaffeineBoost.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     // path to picture
     public static final String IMG = makeCardPath("Attack.png");
@@ -43,36 +42,34 @@ public class CardOverwork extends AbstractCoderCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheCoder.Enums.COLOR_GRAY;
 
     private static final int COST = 0;
-    private static final int MAGIC = 5;
-    private static final int ENERGY = 3;
+    private static final int DRAW = 3;
+    private static final int ENERGY = 2;
+    private static final int UPGRADE_PLUS_DRAW = 2;
+    private static final int UPGRADE_PLUS_ENERGY = 1;
 
     // /STAT DECLARATION/
 
-    public CardOverwork() {
+    public CardCaffeineBoost() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        // making card do damage and gain block
-        this.magicNumber = this.baseMagicNumber = MAGIC;
-        this.exhaust = true;
+        this.magicNumber = this.baseMagicNumber = DRAW;
+        this.defaultSecondMagicNumber = this.defaultBaseSecondMagicNumber = ENERGY;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // This card will deal damage and have an animation
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber, false));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new StrengthPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new DexterityPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new EndTurnDeathPower(p)));
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.defaultSecondMagicNumber));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new LoseDrawNextTurn(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new LoseEnergyNextTurn(p, this.defaultSecondMagicNumber), this.defaultSecondMagicNumber));
     }
 
     // Upgraded stats.
@@ -81,7 +78,8 @@ public class CardOverwork extends AbstractCoderCard {
         if (!upgraded) {
             this.upgradeName();
             this.rawDescription = UPGRADE_DESCRIPTION;
-            this.isInnate = true;
+            this.upgradeMagicNumber(UPGRADE_PLUS_DRAW);
+            this.upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_ENERGY);
             this.initializeDescription();
         }
     }

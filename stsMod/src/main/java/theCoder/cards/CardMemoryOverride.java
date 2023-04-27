@@ -21,7 +21,7 @@ import theCoder.TheCoderMod;
 import theCoder.characters.TheCoder;
 
 import static theCoder.TheCoderMod.makeCardPath;
-public class CardOverwork extends AbstractCoderCard {
+public class CardMemoryOverride extends AbstractCoderCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -29,7 +29,7 @@ public class CardOverwork extends AbstractCoderCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = TheCoderMod.makeID(CardOverwork.class.getSimpleName());
+    public static final String ID = TheCoderMod.makeID(CardMemoryOverride.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     // path to picture
     public static final String IMG = makeCardPath("Attack.png");
@@ -43,36 +43,26 @@ public class CardOverwork extends AbstractCoderCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheCoder.Enums.COLOR_GRAY;
 
-    private static final int COST = 0;
-    private static final int MAGIC = 5;
-    private static final int ENERGY = 3;
+    private static final int COST = 1;
 
     // /STAT DECLARATION/
 
-    public CardOverwork() {
+    public CardMemoryOverride() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        // making card do damage and gain block
-        this.magicNumber = this.baseMagicNumber = MAGIC;
         this.exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // This card will deal damage and have an animation
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber, false));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new StrengthPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new DexterityPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new EndTurnDeathPower(p)));
+        // trying to create a new "intent" of target monster
+        // basicly if somthing is going to do big damage, and you dont want it to
+        // use this card to make it go to its next intent
     }
 
     // Upgraded stats.

@@ -35,5 +35,13 @@
         "theCoder:BoilingPower": {
                 "NAME": "Boiling",
                 "DESCRIPTIONS": ["At the start of turn, deal ", " damage to source and increase by 1"]
+        },
+        "theCoder:LoseDrawNextTurn": {
+                "NAME": "Less Draw",
+                "DESCRIPTIONS": ["At the start of turn, draw ", " less"]
+        },
+        "theCoder:LoseEnergyNextTurn": {
+                "NAME": "Boiling",
+                "DESCRIPTIONS": ["At the start of turn, lose ", " energy"]
         }
 }

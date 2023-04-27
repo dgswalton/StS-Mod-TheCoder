@@ -213,7 +213,16 @@
     "DESCRIPTION": "[TESTING] Kill all processes immediately; Test Custom Variable: index {!theCoder:TEST_VAR!,!theCoder:TEST_VAR!,!theCoder:TEST_VAR!};"
   },
   "theCoder:CardMatrix": {
-    "NAME": "[R][C]",
+    "NAME": "[ ] [ ]",
     "DESCRIPTION": "Deal thecoder:index {!theCoder:Index0!, !theCoder:Index1!, !theCoder:Index2!, !theCoder:Index3!, !theCoder:Index4!} damage; NL Gain thecoder:index {!theCoder:SecIndex0!, !theCoder:SecIndex1!, !theCoder:SecIndex2!, !theCoder:SecIndex3!, !theCoder:SecIndex4!} block; NL Happens at same thecoder:index_value;"
+  },
+  "theCoder:CardFreeze": {
+    "NAME": "Freeze",
+    "DESCRIPTION": "Gain !B! block; NL Skip next turn;"
+  },
+  "theCoder:CardCaffeineBoost": {
+    "NAME": "Caffeine Boost",
+    "DESCRIPTION": "Draw !M! cards; NL Gain [E] [E] ; NL Next turn: Draw !M! less cards; NL lose [E] [E] ;",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards; NL Gain [E] [E] [E] ; NL Next turn: Draw !M! less cards; NL lose [E] [E] [E] ;"
   }
 }
