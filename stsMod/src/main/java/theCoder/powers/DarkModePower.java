@@ -35,7 +35,6 @@ public class DarkModePower extends AbstractPower {
         this.owner = owner;
         this.source = source;
         this.type = PowerType.DEBUFF;
-        this.description = DESCRIPTIONS[0];
         this.updateDescription();
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);

@@ -43,5 +43,9 @@
         "theCoder:LoseEnergyNextTurn": {
                 "NAME": "Boiling",
                 "DESCRIPTIONS": ["At the start of turn, lose ", " energy"]
+        },
+        "theCoder:LongTermProjectPower": {
+                "NAME": "Long Term Project",
+                "DESCRIPTIONS": ["If you played at most 1 card this turn, gain ", " strength and dexterity"]
         }
 }

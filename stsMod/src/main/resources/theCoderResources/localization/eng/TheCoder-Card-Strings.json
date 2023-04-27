@@ -224,5 +224,13 @@
     "NAME": "Caffeine Boost",
     "DESCRIPTION": "Draw !M! cards; NL Gain [E] [E] ; NL Next turn: Draw !M! less cards; NL lose [E] [E] ;",
     "UPGRADE_DESCRIPTION": "Draw !M! cards; NL Gain [E] [E] [E] ; NL Next turn: Draw !M! less cards; NL lose [E] [E] [E] ;"
+  },
+  "theCoder:CardFAIL": {
+    "NAME": "F.A.I.L.",
+    "DESCRIPTION": "First Attempt In Learning; NL If this is the first card played this turn, deal !D! damage; NL Else, deal !M! damage;"
+  },
+  "theCoder:CardLongTermProject": {
+    "NAME": "Long Term Project",
+    "DESCRIPTION": "At the end of your turn, if you played at most 1 card, gain !M! strength and dexterity;"
   }
 }

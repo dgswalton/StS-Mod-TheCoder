@@ -163,14 +163,14 @@ public class TheCoder extends CustomPlayer {
         if (testingSet == 1) {
             //retVal.add(CardStrike.ID);
             //retVal.add(CardDefend.ID);
-            retVal.add(CardConditional.ID);
+            retVal.add(CardFAIL.ID);
             retVal.add(CardStrikeIndex.ID);
             retVal.add(CardDefendIndex.ID);
             retVal.add(CardOverwork.ID);
             retVal.add(CardOverheat.ID);
             retVal.add(CardPython.ID);
             retVal.add(CardJava.ID);
-            retVal.add(CardCaffeineBoost.ID);
+            retVal.add(CardLongTermProject.ID);
         }
         else if (testingSet == 2) {
             //retVal.add(CardPointer.ID);
