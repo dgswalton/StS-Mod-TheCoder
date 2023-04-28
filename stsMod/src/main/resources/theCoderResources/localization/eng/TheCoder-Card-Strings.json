@@ -232,5 +232,19 @@
   "theCoder:CardLongTermProject": {
     "NAME": "Long Term Project",
     "DESCRIPTION": "At the end of your turn, if you played at most 1 card, gain !M! strength and dexterity;"
+  },
+  "theCoder:CardLinkedList": {
+    "NAME": "Linked List",
+    "DESCRIPTION": "Your thecoder:index_value can now exceed 4; NL At end of combat, heal equal to your index value;",
+    "UPGRADE_DESCRIPTION": "Your thecoder:index_value can now exceed 4; NL At end of combat, heal equal to twice your index value;"
+  },
+  "theCoder:CardCountermeasures": {
+    "NAME": "Countermeasures",
+    "DESCRIPTION": "Draw a card; NL If it was a burn, heal 4; NL Else if it was a dazed, draw 2; NL Else if it was a void, gain 2 energy;",
+    "UPGRADE_DESCRIPTION": "Draw a card; NL If it was a burn, heal 4; NL Else if it was a dazed, draw 2; NL Else if it was a void, gain 2 energy; NL Do it again;"
+  },
+  "theCoder:CardItsAFeature": {
+    "NAME": "It's A Feature",
+    "DESCRIPTION": "Gain !M! thecoder:questionable_plated_armor ; NL Insert a dazed into your draw pile;"
   }
 }

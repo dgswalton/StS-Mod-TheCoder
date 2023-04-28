@@ -47,5 +47,13 @@
         "theCoder:LongTermProjectPower": {
                 "NAME": "Long Term Project",
                 "DESCRIPTIONS": ["If you played at most 1 card this turn, gain ", " strength and dexterity"]
+        },
+        "theCoder:LinkedListPower": {
+                "NAME": "Linked List",
+                "DESCRIPTIONS": ["Your index value can now exceed 4. At end of combat, heal "]
+        },
+        "theCoder:ItsAFeaturePower": {
+                "NAME": "Plated Armor?",
+                "DESCRIPTIONS": ["At the end of your turn, gain ", " block. Receiving unblocked attack damage reduces Plated Armor? by 1... I think"]
         }
 }

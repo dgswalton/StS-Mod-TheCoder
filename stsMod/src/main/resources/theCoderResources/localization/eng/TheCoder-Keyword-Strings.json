@@ -35,11 +35,21 @@
     "DESCRIPTION": "The number on your #yIndex power. If you don't have an index power, #yIndex #yValue is #b0."
   },
   {
+    "PROPER_NAME": "Questionable Plated Armor",
+    "NAMES": [
+      "questionable plated armor",
+      "Questionable plated armor",
+      "questionable_plated_armor",
+      "questionable"
+    ],
+    "DESCRIPTION": "At the end of your turn, gain block. Receiving unblocked attack damage reduces #yPlated #yArmor by #b1... I think (yeah - definitely a feature and not a bug)"
+  },
+  {
     "PROPER_NAME": "Boiling",
     "NAMES": [
       "boiling",
       "Boiling"
     ],
-    "DESCRIPTION": "Boiling creatures lose HP at the start of their turn. Each turn, Boiling increments #b1"
+    "DESCRIPTION": "Boiling creatures lose HP at the start of their turn. Each turn, Boiling increments #b1."
   }
 ]
