@@ -9,6 +9,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.curses.Pain;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
@@ -166,8 +167,9 @@ public class TheCoder extends CustomPlayer {
         if (testingSet == 1) {
             //retVal.add(CardStrike.ID);
             //retVal.add(CardDefend.ID);
-            retVal.add(CardCountermeasures.ID);
-            retVal.add(CardItsAFeature.ID);
+            retVal.add(CardCPlusPlus.ID);
+            retVal.add(CardOverheat.ID);
+            retVal.add(CardDebug.ID);
         }
         else if (testingSet == 2) {
             //retVal.add(CardPointer.ID);

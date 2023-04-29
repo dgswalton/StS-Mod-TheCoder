@@ -8,6 +8,7 @@ package theCoder.cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -68,8 +69,22 @@ public class CardDebug extends AbstractCoderCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new BetterExhaustAction(1, false, false, false,
-                        new DebugAction(this.magicNumber, this.upgraded)));
+                new SelectCardsInHandAction(1, "Choose a card to Exhaust", (c) -> {
+                    return true;
+                }, (cards) -> {
+                    AbstractDungeon.actionManager.addToBottom(
+                            new ExhaustSpecificCardAction(cards.get(0), p.hand, false));
+                    if(cards.get(0).type == CardType.CURSE || cards.get(0).type == CardType.STATUS){
+                        AbstractDungeon.actionManager.addToBottom(
+                                new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber)));
+                        AbstractDungeon.actionManager.addToBottom(
+                                new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber)));
+                        if(this.upgraded){
+                            AbstractDungeon.actionManager.addToBottom(
+                                    new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber)));
+                        }
+                    }
+                }));
     }
 
     // Upgraded stats.

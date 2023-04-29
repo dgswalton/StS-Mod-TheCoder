@@ -246,5 +246,9 @@
   "theCoder:CardItsAFeature": {
     "NAME": "It's A Feature",
     "DESCRIPTION": "Gain !M! thecoder:questionable_plated_armor ; NL Insert a dazed into your draw pile;"
+  },
+  "theCoder:CardCPlusPlus": {
+    "NAME": "C++",
+    "DESCRIPTION": "Deal !D! damage; NL Increase this card's damage by !M! this combat."
   }
 }
