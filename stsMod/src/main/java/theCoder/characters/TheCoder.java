@@ -167,7 +167,7 @@ public class TheCoder extends CustomPlayer {
         if (testingSet == 1) {
             //retVal.add(CardStrike.ID);
             //retVal.add(CardDefend.ID);
-            retVal.add(CardCPlusPlus.ID);
+            retVal.add(CardRandNextInt.ID);
             retVal.add(CardOverheat.ID);
             retVal.add(CardDebug.ID);
         }

@@ -250,5 +250,9 @@
   "theCoder:CardCPlusPlus": {
     "NAME": "C++",
     "DESCRIPTION": "Deal !D! damage; NL Increase this card's damage by !M! this combat."
+  },
+  "theCoder:CardRandNextInt": {
+    "NAME": "rand.nextInt",
+    "DESCRIPTION": "Deal 0 to !M! damage; NL Lower bound is inclusive; NL Upper bound is exclusive;"
   }
 }
