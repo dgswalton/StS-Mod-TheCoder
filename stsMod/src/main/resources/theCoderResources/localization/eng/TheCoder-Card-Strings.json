@@ -258,5 +258,15 @@
   "theCoder:CardBinarySwitchUp": {
     "NAME": "Binary Switch Up",
     "DESCRIPTION": "0 cost cards cost 1; NL 1 cost cards cost 0;"
-  }
+  },
+  "theCoder:CardCallaborate": {
+    "NAME": "Collaborate",
+    "DESCRIPTION": "All enemies who intend to attack, attack this enemy once; NL Exhaust;",
+    "UPGRADE_DESCRIPTION": "All enemies who intend to attack, attack this enemy once;"
+  },
+  "theCoder:CardMemoryOverride": {
+  "NAME": "Memory Override",
+  "DESCRIPTION": "Change enemy's intent; NL Create a burn in hand; NL Exhaust;",
+  "UPGRADE_DESCRIPTION": "Change enemy's intent; NL Create a burn in hand;"
+}
 }

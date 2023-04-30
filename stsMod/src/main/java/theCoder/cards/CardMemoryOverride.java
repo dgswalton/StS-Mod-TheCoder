@@ -43,7 +43,7 @@ public class CardMemoryOverride extends AbstractCoderCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheCoder.Enums.COLOR_GRAY;
@@ -71,7 +71,7 @@ public class CardMemoryOverride extends AbstractCoderCard {
         if (!upgraded) {
             this.upgradeName();
             this.rawDescription = UPGRADE_DESCRIPTION;
-            this.isInnate = true;
+            this.exhaust = false;
             this.initializeDescription();
         }
     }

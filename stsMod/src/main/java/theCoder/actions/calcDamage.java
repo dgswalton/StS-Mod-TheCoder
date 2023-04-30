@@ -44,6 +44,10 @@ public class calcDamage {
                     damage = (damage *3) /2;
                 }
             }
+            AbstractPower flight = this.monster.getPower("Flight");
+            if(flight != null){
+                damage = damage /2;
+            }
         }
         AbstractPower weak = this.player.getPower("Weak");
         if(weak != null){
