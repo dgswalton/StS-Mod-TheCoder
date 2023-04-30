@@ -165,9 +165,9 @@ public class TheCoder extends CustomPlayer {
         int testingSet = 1; // Testing Configuration, 1: Jayce; 2: Dad
 
         if (testingSet == 1) {
-            //retVal.add(CardStrike.ID);
-            //retVal.add(CardDefend.ID);
-            retVal.add(CardRandNextInt.ID);
+            retVal.add(CardStrike.ID);
+            retVal.add(CardDefend.ID);
+            retVal.add(CardBinarySwitchUp.ID);
             retVal.add(CardOverheat.ID);
             retVal.add(CardDebug.ID);
         }

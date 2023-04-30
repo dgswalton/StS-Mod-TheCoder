@@ -55,5 +55,9 @@
         "theCoder:ItsAFeaturePower": {
                 "NAME": "Plated Armor?",
                 "DESCRIPTIONS": ["At the end of your turn, gain ", " block. Receiving unblocked attack damage reduces Plated Armor? by 1... I think"]
+        },
+        "theCoder:BinarySwitchUpPower": {
+                "NAME": "Binary Switch Up",
+                "DESCRIPTIONS": ["0 cost cards cost 1 and 1 cost cards cost 0;"]
         }
 }

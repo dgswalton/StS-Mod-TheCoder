@@ -254,5 +254,9 @@
   "theCoder:CardRandNextInt": {
     "NAME": "rand.nextInt",
     "DESCRIPTION": "Deal 0 to !M! damage; NL Lower bound is inclusive; NL Upper bound is exclusive;"
+  },
+  "theCoder:CardBinarySwitchUp": {
+    "NAME": "Binary Switch Up",
+    "DESCRIPTION": "0 cost cards cost 1; NL 1 cost cards cost 0;"
   }
 }
