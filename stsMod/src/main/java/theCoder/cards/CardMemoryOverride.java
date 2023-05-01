@@ -63,6 +63,29 @@ public class CardMemoryOverride extends AbstractCoderCard {
         // trying to create a new "intent" of target monster
         // basicly if somthing is going to do big damage, and you dont want it to
         // use this card to make it go to its next intent
+        /*System.out.println("---------------------------");
+        System.out.println(m.nextMove);
+        //AbstractDungeon.actionManager.addToBottom(new RollMoveAction(m));
+        m.rollMove();
+        System.out.println(m.nextMove);
+        m.rollMove();
+        System.out.println(m.nextMove);
+        m.rollMove();
+        System.out.println(m.nextMove);
+        m.rollMove();
+        System.out.println(m.nextMove);
+        m.rollMove();
+        System.out.println(m.nextMove);
+        m.rollMove();
+        System.out.println(m.nextMove);
+        m.rollMove();
+        System.out.println(m.nextMove);
+        if (m.nextMove == 4) {
+            m.setMove((byte)3, AbstractMonster.Intent.ATTACK, ((DamageInfo)m.damage.get(0)).base);
+        } else {
+            m.setMove(m.MOVES[0], (byte) 4, AbstractMonster.Intent.BUFF);
+        }
+        System.out.println(m.nextMove);*/
     }
 
     // Upgraded stats.
