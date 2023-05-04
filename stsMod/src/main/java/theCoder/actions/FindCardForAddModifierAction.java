@@ -12,8 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.random.Random;
-import theCoder.TheCoderMod;
-import theCoder.cards.CardBasicBug;
+import theCoder.helpers.TheCoderCardTags;
 //import thePackmaster.SpireAnniversary5Mod;
 //import thePackmaster.util.Wiz;
 
@@ -62,17 +61,17 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        /*//Predicate<AbstractCard> tagCheck = card -> !card.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED);
-        Predicate<AbstractCard> tagCheck = card -> !card.hasTag(AbstractCard.CardTags.MODED);
+        //Predicate<AbstractCard> tagCheck = card -> !card.hasTag(SpireAnniversary5Mod.ISCARDMODIFIED);
+        Predicate<AbstractCard> tagCheck = card -> !card.hasTag(TheCoderCardTags.CANT_MOD);
 
         if (random) {
             ArrayList<AbstractCard> chosen = new ArrayList<>();
             ArrayList<AbstractCard> potentialTargets = new ArrayList<>();
 
             for (AbstractCard c : targetgroup.group) {
-                //if (requirements.and(tagCheck).test(c)) {
+                if (requirements.and(tagCheck).test(c)) {
                     potentialTargets.add(c);
-                //}
+                }
             }
             AbstractCard n;
 
@@ -112,6 +111,6 @@ public class FindCardForAddModifierAction extends AbstractGameAction {
         isDone = true;
     }
     public static <T> T getRandomItem(List<T> list, Random rng) {
-        return list.isEmpty() ? null : list.get(rng.random(list.size() - 1));*/
+        return list.isEmpty() ? null : list.get(rng.random(list.size() - 1));
     }
 }

@@ -16,7 +16,10 @@ public abstract class AbstractCoderCard extends CustomCard {
     public int defaultBaseSecondMagicNumber;    // And our base stat - the number in it's base state. It will reset to that by default.
     public boolean upgradedDefaultSecondMagicNumber; // A boolean to check whether the number has been upgraded or not.
     public boolean isDefaultSecondMagicNumberModified; // A boolean to check whether the number has been modified or not, for coloring purposes. (red/green)
-
+    public int SecMagicValue;
+    public int BaseSecMagicValue;
+    public boolean upgradedSecMagic;
+    public boolean isSecMagicModified;
     // CUSTOM VARIABLE
     public int testVar; // testing custom variable
 //    public int[] indexList = new int[4];
@@ -68,6 +71,7 @@ public abstract class AbstractCoderCard extends CustomCard {
         isBlockModified = false;
         isMagicNumberModified = false;
         isDefaultSecondMagicNumberModified = false;
+        isSecMagicModified = false;
         testVar = -1;
         isIndexModified = false;
         index0 = baseIndex0 = 0;
@@ -94,6 +98,10 @@ public abstract class AbstractCoderCard extends CustomCard {
             defaultSecondMagicNumber = defaultBaseSecondMagicNumber; // Show how the number changes, as out of combat, the base number of a card is shown.
             isDefaultSecondMagicNumberModified = true; // Modified = true, color it green to highlight that the number is being changed.
         }
+        if(upgradedSecMagic){
+            SecMagicValue = BaseSecMagicValue;
+            isSecMagicModified = true;
+        }
         if(upgradedIndex){
             index0 = baseIndex0;
             index1 = baseIndex1;
@@ -117,6 +125,11 @@ public abstract class AbstractCoderCard extends CustomCard {
         defaultBaseSecondMagicNumber += amount; // Upgrade the number by the amount you provide in your card.
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber; // Set the number to be equal to the base value.
         upgradedDefaultSecondMagicNumber = true; // Upgraded = true - which does what the above method does.
+    }
+    public void upgradeSecMagic(int amount){
+        BaseSecMagicValue += amount;
+        SecMagicValue = BaseSecMagicValue;
+        upgradedSecMagic = true;
     }
     public void upgradeIndex(int amount){
         baseIndex0 += amount;

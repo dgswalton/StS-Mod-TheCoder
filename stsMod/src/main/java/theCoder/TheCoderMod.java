@@ -425,6 +425,7 @@ public class TheCoderMod implements
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
 
+        BaseMod.addDynamicVariable(new SecMagic());
         BaseMod.addDynamicVariable(new CVTestVar());
         BaseMod.addDynamicVariable(new Index0());
         BaseMod.addDynamicVariable(new Index1());
