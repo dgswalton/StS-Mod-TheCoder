@@ -171,7 +171,7 @@ public class TheCoder extends CustomPlayer {
             retVal.add(CardOverheat.ID);
             retVal.add(CardDebug.ID);
             retVal.add(CardKillall9.ID);
-            retVal.add(CardAttIncrament.ID);
+            //retVal.add(CardAttIncrament.ID);
         }
         else if (testingSet == 2) {
             //retVal.add(CardPointer.ID);
