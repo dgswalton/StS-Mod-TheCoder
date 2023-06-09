@@ -1,4 +1,4 @@
-package theCoder.cards;
+/*package theCoder.cards;
 
 import basemod.abstracts.CustomCard;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
@@ -114,7 +114,7 @@ public class CardPointer extends AbstractCoderCard implements OnObtainCard {
         //AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         // 4. Set the room to INCOMPLETE - don't allow us to use the map, etc.
         //CardGroup group = CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck); // 5. Get a card group of all currently unbottled cards
-        CardGroup group = getMasterDeckWithoutPointerCards(); // Get a version of the master deck without any reference to Pointer cards
+/*        CardGroup group = getMasterDeckWithoutPointerCards(); // Get a version of the master deck without any reference to Pointer cards
         AbstractDungeon.gridSelectScreen.open(group, 1, "Select a target card for this pointer", false, false, false, false);
         // 6. Open the grid selection screen with the cards from the CardGroup we specified above. The description reads "Select a card to bottle for" + (relic name) + "."
 
@@ -137,7 +137,7 @@ public class CardPointer extends AbstractCoderCard implements OnObtainCard {
         });
         System.out.println("...done");
         */
-    }
+  /*  }
 
     public void update() {
         super.update();
@@ -156,7 +156,7 @@ public class CardPointer extends AbstractCoderCard implements OnObtainCard {
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE; // The room phase can now be set to complete (From INCOMPLETE in onEquip)
             AbstractDungeon.gridSelectScreen.selectedCards.clear(); // Always clear your grid screen after using it.*/
             //setDescriptionAfterLoading(); // Set the description to reflect the bottled card (the method is at the bottom of this file)
-            updateName();
+      /*      updateName();
             updateDescription();
         }
 
@@ -165,3 +165,4 @@ public class CardPointer extends AbstractCoderCard implements OnObtainCard {
 
     }
 }
+*/
