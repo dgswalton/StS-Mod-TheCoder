@@ -31,7 +31,6 @@ public class CountermeasuresAction extends AbstractGameAction {
             AbstractCard c = (AbstractCard)var1.next();
             if (c.cardID == "Burn") {
                 AbstractDungeon.actionManager.addToTop(new HealAction(p, p, this.Burn));
-                break;
             } else if (c.cardID == "Dazed"){
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.Dazed, false));
             } else if (c.cardID == "Void"){

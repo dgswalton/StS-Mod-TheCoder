@@ -1,6 +1,5 @@
 package theCoder.cards;
 
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theCoder.TheCoderMod;
 import theCoder.characters.TheCoder;
 import theCoder.powers.LongTermProjectPower;
-import theCoder.powers.RarePower;
 
 import static theCoder.TheCoderMod.makeCardPath;
 

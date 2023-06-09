@@ -67,11 +67,11 @@ public class TheCoder extends CustomPlayer {
     // =============== BASE STATS =================
 
     public static final int ENERGY_PER_TURN = 3;
-    public static final int STARTING_HP = 75;
-    public static final int MAX_HP = 75;
+    public static final int STARTING_HP = 76;
+    public static final int MAX_HP = 76;
     public static final int STARTING_GOLD = 99;
-    public static final int CARD_DRAW = 9;
-    public static final int ORB_SLOTS = 3;
+    public static final int CARD_DRAW = 5;
+    public static final int ORB_SLOTS = 0;
 
     // =============== /BASE STATS/ =================
 
@@ -166,16 +166,17 @@ public class TheCoder extends CustomPlayer {
 
         if (testingSet == 1) {
             retVal.add(CardStrike.ID);
+            retVal.add(CardStrike.ID);
+            retVal.add(CardStrike.ID);
+            retVal.add(CardStrike.ID);
             retVal.add(CardDefend.ID);
-            retVal.add(CardSpaghettiCode.ID);
+            retVal.add(CardDefend.ID);
+            retVal.add(CardDefend.ID);
+            retVal.add(CardDefend.ID);
             retVal.add(CardOverheat.ID);
-            retVal.add(CardDebug.ID);
-            retVal.add(CardKillall9.ID);
-            //retVal.add(CardAttIncrament.ID);
+            retVal.add(CardSyntaxError.ID);
         }
         else if (testingSet == 2) {
-            //retVal.add(CardPointer.ID);
-            retVal.add(CardKillall9.ID);
         }
 
         return retVal;
@@ -247,7 +248,7 @@ public class TheCoder extends CustomPlayer {
     //Which card should be obtainable from the Match and Keep event?
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new DefaultCommonAttack();
+        return new CardStrike();
     }
 
     // The class name as it appears next to your player name in-game

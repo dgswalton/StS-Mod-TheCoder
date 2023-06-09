@@ -1,4 +1,4 @@
-package theCoder.cards;
+/*package theCoder.cards;
 
 // Type: Common Attack
 // Cost: 2
@@ -28,7 +28,7 @@ public class CardMemoryOverride extends AbstractCoderCard {
      */
 
     // TEXT DECLARATION
-
+/*
     public static final String ID = TheCoderMod.makeID(CardMemoryOverride.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     // path to picture
@@ -86,7 +86,7 @@ public class CardMemoryOverride extends AbstractCoderCard {
             m.setMove(m.MOVES[0], (byte) 4, AbstractMonster.Intent.BUFF);
         }
         System.out.println(m.nextMove);*/
-    }
+ /*   }
 
     // Upgraded stats.
     @Override
@@ -99,3 +99,4 @@ public class CardMemoryOverride extends AbstractCoderCard {
         }
     }
 }
+*/

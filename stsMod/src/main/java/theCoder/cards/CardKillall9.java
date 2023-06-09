@@ -1,4 +1,4 @@
-package theCoder.cards;
+/*package theCoder.cards;
 
 // Type: Common Attack
 // Cost: 2
@@ -20,7 +20,7 @@ public class CardKillall9 extends AbstractCoderCard {
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      */
 
-    // TEXT DECLARATION
+/*    // TEXT DECLARATION
 
     public static final String ID = TheCoderMod.makeID(CardKillall9.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -90,3 +90,4 @@ public class CardKillall9 extends AbstractCoderCard {
     public void upgrade() {
     }
 }
+*/

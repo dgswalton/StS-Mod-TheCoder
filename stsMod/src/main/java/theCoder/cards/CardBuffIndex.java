@@ -5,13 +5,7 @@ package theCoder.cards;
 // Description: Deal 8 damage; Gain 8 block;
 // Upgrade: Cost -> 1
 
-import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,9 +15,7 @@ import com.megacrit.cardcrawl.powers.*;
 import theCoder.TheCoderMod;
 import theCoder.characters.TheCoder;
 import theCoder.powers.IndexPower;
-import theCoder.powers.RarePower;
 
-import static theCoder.TheCoderMod.PLACEHOLDER_POTION_HYBRID;
 import static theCoder.TheCoderMod.makeCardPath;
 public class CardBuffIndex extends AbstractCoderCard {
 

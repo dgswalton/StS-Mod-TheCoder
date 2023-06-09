@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.function.Predicate;
 import java.util.List;
 public class FindCardForAddModifierAction extends AbstractGameAction {
-    private static final UIStrings uiSTRINGS = CardCrawlGame.languagePack.getUIString("theCoder:TheCoderModifiers");
+    private static final UIStrings uiSTRINGS = CardCrawlGame.languagePack.getUIString("theCoder:AddModifierUI");
     private AbstractCardModifier mod;
     private int count;
     private boolean random;
