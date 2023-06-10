@@ -38,7 +38,7 @@ public class CardDebug extends AbstractCoderCard {
     public static final String ID = TheCoderMod.makeID(CardDebug.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     // path to picture
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Debug.png");
     // use JSON to get the name and description of card
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

@@ -21,7 +21,7 @@ public class CardLongTermProject extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheCoderMod.makeID(CardLongTermProject.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("LongTermProject.png");
 
     // /TEXT DECLARATION/
 

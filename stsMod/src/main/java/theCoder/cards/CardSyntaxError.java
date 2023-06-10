@@ -30,7 +30,7 @@ public class CardSyntaxError extends AbstractCoderCard {
     public static final String ID = TheCoderMod.makeID(CardSyntaxError.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     // create image path
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("SyntaxError.png");
     // get name and description from JSON
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

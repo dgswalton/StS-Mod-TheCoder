@@ -34,7 +34,7 @@ public class CardNull extends AbstractCoderCard {
     public static final String ID = TheCoderMod.makeID(CardNull.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     // path to picture
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Null.png");
     // use JSON to get the name and description of card
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -83,6 +83,13 @@ public class CardNull extends AbstractCoderCard {
     @Override
     public void applyPowers() {
         calcMagic(AbstractDungeon.player);
+        super.applyPowers();
+    }
+
+    @Override
+    public void atTurnStart() {
+        calcMagic(AbstractDungeon.player);
+        super.atTurnStart();
     }
     private void calcMagic(AbstractPlayer p){
         this.magicNumber = this.baseMagicNumber;
@@ -97,6 +104,9 @@ public class CardNull extends AbstractCoderCard {
         }
         if(this.upgraded && index != null){
             this.magicNumber += index.amount;
+        }
+        if(this.magicNumber < 0){
+            this.magicNumber = 0;
         }
     }
 
